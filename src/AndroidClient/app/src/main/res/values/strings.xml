@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GCRA Client</string>
+    <string name="cameraLeft">Camera Left</string>
+    <string name="cameraRight">Camera Right</string>
+    <string name="controlServerAddress">Control Server Address</string>
+    <string name="controlServerPort">Control Server Port</string>
+    <string name="updateValues">Update values</string>
+    <string name="nextActivity">Go to Main Activity</string>
+    <string name="age">Age</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="gender">Gender</string>
+    <string name="submit">Submit</string>
+</resources>

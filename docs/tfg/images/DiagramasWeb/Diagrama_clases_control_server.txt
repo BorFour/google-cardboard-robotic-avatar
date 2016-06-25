@@ -1,0 +1,1 @@
+%2F%2F Cool Class Diagram, [UDPServer|IP:String;port:int|bind();recvfrom()]1++->1[ServoControl|device:Serial;currentAngle:float|moveAngle()]

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <VideoView
+        android:id="@+id/myvideoviewLeft"
+        android:visibility="visible"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_weight="0.5" />
+
+    <VideoView
+        android:id="@+id/myvideoviewRight"
+        android:visibility="visible"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_weight="0.5" />
+
+    <!--<com.google.vrtoolkit.cardboard.CardboardView-->
+        <!--android:id="@+id/cardboard_view1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentTop="true"   />-->
+
+    </LinearLayout>
+
+
+
+<!--<RelativeLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+    <!--<SurfaceView-->
+        <!--android:id="@+id/surfaceView"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent" />-->
+<!--</RelativeLayout>-->

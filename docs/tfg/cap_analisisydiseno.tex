@@ -1,0 +1,130 @@
+\chapter{Análisis, arquitectura y diseño del sistema}
+\label{chap:sistemadesarrollado}
+
+\lsection{Análisis}
+\subsection{Descripción del producto}
+\producto es un producto que permite al usuario ver a través de los ojos de un avatar. Esto se consigue gracias a unas gafas de realidad virtual *REFERENCIA FIGURA* conectadas a través Internet a un robot con dos cámaras por ojos. Los movimientos de la cabeza del usuario serán también transmitidos a través de la red hasta llegar al robot, que ejecuta un programa que recibe estos datos y actualiza la orientación de las cámaras en tiempo real para dar la sensación al usuario final de estar en otro cuerpo.
+
+\todo[inline]{Referencia a gafas de VR: \currentname}
+\subsection{Viabilidad}
+1
+
+\todo[inline]{Análisis: \currentname}
+
+\subsection{Objetivos y funcionalidad}
+
+El objetivo principal del proyecto es el de desarrollar un sistema con los siguientes tres elementos:
+\begin{enumerate}
+\item Dos \textbf{servidores de vídeo} que reciban como entrada un dispositivo cada uno (en este caso, una cámara por servidor) y como salida ofrezcan un \textit{stream} multimedia.
+\item Un \textbf{servidor de control} que reciba el posicionamiento del dispositivo de realidad virtual y asigne un valor analógico a los actuadores a partir de las coordenadas, que serán los motores sobre los que se encuentra la estructura en la que reposen las cámaras.
+\item Una \textbf{aplicación para dispositivo smartphone} que establezca la conexión con los servidores. Recibirá como entrada dos \textit{streams} de vídeo (uno por cada ojo) y como salida enviará la rotación respecto de los tres ejes dimensionales.
+\end{enumerate}
+
+\begin{figure}[h]
+	\centerline{
+		\mbox{\includegraphics[width=4.00in]{images/diagrama_red_fisico.png}}
+	}
+	\caption{\textbf{Diagrama conceptual de la red del sistema}}
+	\label{fig:diagrama_red}
+\end{figure}
+
+
+Sólo existe un tipo de usuario de la aplicación y, en un principio, su interacción se limitará a la siguiente:
+
+\begin{itemize}
+	\item Alterar la posición física de las gafas de realidad virtual girando la cabeza.
+	\item Modificar la dirección IP y los puertos de sendos servidores a través de la pantalla táctil del smartphone.
+\end{itemize}
+
+
+
+
+El sistema no debería necesitar ningún tipo de persistencia. Las conexiones se realizarían en modo \textit{stateless}, lo que quiere decir el cliente se conecta y desconecta de los servidores arbitrariamente sin que deban almacenarse datos de sesión algunos.
+
+\subsection{Requisitos}
+\begin{enumerate}
+	\item Las imágenes se transmiten y se muestran con baja latencia.
+	\item Los distintos objetos comunes en las dos imágenes se pueden apreciar en tres dimensiones.
+	\item Los consecutivos movimientos de la cabeza son transmitidos secuencialmente y con baja latencia.	
+	\item El usuario puede modificar la dirección IP de cada servidor.
+	\item El usuario puede modificar el puerto de cada servidor.
+\end{enumerate}
+\subsection{Tamaño y rendimiento}
+Esta arquitectura del software está orientada a permitir exclusivamente una conexión simultánea. Al tratarse de una aplicación en tiempo real, más conexiones podrían congestionar el tráfico en la red y saturar los recursos de los servidores. Además, la rotación de los motores sólo debería controlarse desde un solo cliente.
+
+
+\begin{figure}[H]
+	\centerline{
+		\mbox{\includegraphics[width=4.00in]{images/coordinates.jpg}}
+	}
+	\caption{\textbf{Coordenadas polares}. Azimuth ($\Psi$), Pitch ($\Phi$), Roll ($\theta$)}
+	\label{fig:coordenadas_polares}
+\end{figure}
+
+
+\lsection{Arquitectura}
+
+\subsection{Vista estática}
+
+El cliente es el componente central de este sistema heterogéneo. Éste está compuesto a su vez de otros tres componentes que se ejecutan como hilos independientes en la app. Uno de ellos envía periódicamente la orientación del dispositivo al servidor de control en datagramas a través del protocolo de transporte UDP. Los otros dos reciben un stream de vídeo cada uno, procedentes de los servidores de vídeo a través del protocolo de aplicación RTSP. El servidor de control está conectado a su vez con el Arduino por medio de USB, al igual que las cámaras están conectadas a la máquina en la que se ejecutan los servidores de vídeos también por USB. Estas relaciones entre los componentes se pueden visualizar en la figura~\ref{fig:diagrama_componentes}
+
+\begin{figure}[H]
+	\centerline{
+		\mbox{\includegraphics[width=4.00in]{images/diagrama_componentes.png}}
+	}
+	\caption{\textbf{Diagrama de componentes del sistema}. Se pueden apreciar los distintos componentes, las interfaces que ofrecen y requieren y el protocolo que utilizan para comunicarse entre sí.}
+	\label{fig:diagrama_componentes}
+\end{figure}
+
+
+
+\subsection{Vista funcional} % La visión funcional: describe qué hace cada componente.
+
+Aquí iría una explicación detallada de la funcionalidad de cada componente por separado
+
+\subsubsection{Servidor de vídeo}
+\todo[inline]{Vista funcional: \currentname}
+\subsubsection{Servidor de control}
+\todo[inline]{Vista funcional: \currentname}
+\subsubsection{Cliente móvil}
+\todo[inline]{Vista funcional: \currentname}
+
+\subsection{Vista dinámica} % La visión dinámica: describe cómo se comportan los componentes a lo largo del tiempo y como interactúan entre sí.
+\todo[inline]{\currentname}
+Aquí se muestra cómo evoluciona el sistema con el tiempo y dados ciertos eventos.
+
+\lsection{Diseño}
+
+\subsection{Servidor de vídeo}
+\todo[inline]{Diseño: \currentname}
+\subsection{Servidor de control}
+\todo[inline]{Diseño: \currentname}
+
+\begin{figure}[H]
+	\centerline{
+		\mbox{\includegraphics[width=4.00in]{images/diagrama_clases_servidor_control.png}}
+	}
+	\caption{Diagrama de clases del servidor de control}
+	\label{fig:diagrama_clases_servidor_control}
+\end{figure}
+
+\subsection{Cliente móvil}
+\todo[inline]{Diseño: \currentname}
+\begin{figure}[H]
+	\centerline{
+		\mbox{\includegraphics[width=7.00in]{images/diagrama_clases_app.png}}
+	}
+	\caption{Diagrama de clases de la aplicación para Android}
+	\label{fig:diagrama_clases_app}
+\end{figure}
+
+\begin{figure}[H]
+	\centerline{
+		\mbox{\includegraphics[width=7.00in]{images/diagrama_actividad.png}}
+	}
+	\caption{\textbf{Diagrama de actividad de la aplicación para Android}. En ocre, las vistas de la aplicación. En azul, las interacciones del usuario. En rojo, las respuestas del sistema.}
+	\label{fig:diagrama_actividad_app}
+\end{figure}
+
+%\todo[inline]{Diseño: \textbf{Diagrama de secuencia}}
+

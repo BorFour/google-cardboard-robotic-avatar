@@ -1,0 +1,34 @@
+\chapter{Conclusiones y trabajo futuro}
+\label{chap:conclusiones}
+
+
+\lsection{Conclusiones}
+\todo[inline]{\currentname}
+
+Los objetivos principales de este proyecto se han visto realizados.
+
+Personalmente, se ha llevado a cabo el desarrollo de un sistema distribuido heterógeneo, integrando tecnologías punteras y variadas como culmen de mis estudios en \carrera. 
+
+El mundo de las redes multimedia y la transmisión de vídeo y audio tiene muchos detalles. A pesar de que no ha sido demasiado complejo integrar estas herramientas para desplegar un servidor de vídeo. Las implementaciones de los protocolos a nivel de aplicación de transmisión de multimedia (RTSP en este caso) son complejas a bajo nivel, así como los códecs, los formatos y todos sus parámetros, variables y metadatos.
+		
+Por otro lado y como se ha comentado previamente, la realidad virtual se encuentar en auge, motivo por el cual han surgido y surgen nuevas librerías, herramientas, frameworks, etc. orientados la creación de programas y aplicaciones de VR. Al ser tan nuevas, todavía necesitan madurar arreglando fallos y bugs, documentando mejor las APIs e implementando más funcionalidad necesaria y/o útil para el desarrollo de este tipo de software.
+
+
+
+\lsection{Trabajo futuro}
+\todo[inline]{\currentname}
+\begin{itemize}
+
+	\item {
+		Tareas de optimización de la QoS, a saber:
+		\begin{enumerate}
+			\item Desarrollar una \textbf{vista} para Android (android.view.View) \textbf{específica para streams RTSP}, que ofrezca mayores prestaciones tales como menor delay, mantener la sesión RTSP, sincronización de los dos flujos de vídeo, etc.
+		\end{enumerate}
+	}	
+	\item Utilizar la API Google VR for Android *REFERENCIA*. Hasta hace unos meses, se llamaba Cardboard API. Actualmente también incluye soporte para DayDream VR\cite{online:daydream}, cuyo lanzamiento tendrá lugar en otoño del 2016, y está más documentada, con más ejemplos y más funcionalidad. Los vídeos se mostrarían sobre una textura de OpenGL, que harían que los vídeos se mostrasen como en la figura~\ref{fig:cardboard_3d}
+	\item Implementar la rotación sobre los ejes X e Y (Pitch y Roll respectivamente, figura ~\ref{fig:coordenadas_polares}).
+	\item \textbf{Utilizar motores paso a paso o \textit{steppers}} para mover la estructura sobre la que se encuentren las cámaras.
+	\item Añadir un stream más que se corresponda con el audio, grabado en el servidor a través de un micrófono cualquiera.
+	
+\end{itemize}
+\newpage \thispagestyle{empty} % Página vacía 

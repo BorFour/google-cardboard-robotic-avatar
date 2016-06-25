@@ -1,0 +1,72 @@
+\BOOKMARK [0][-]{chapter*.15}{Índice de Figuras}{}% 1
+\BOOKMARK [0][-]{chapter*.16}{Índice de Tablas}{}% 2
+\BOOKMARK [0][-]{chapter.1}{Introducción}{}% 3
+\BOOKMARK [1][-]{section.1.1}{Motivación del proyecto}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Objetivos y enfoque}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{Metodología y plan de trabajo}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Estado del arte}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Introducción}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{Historia, nacimiento y evolución.}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.3}{Estado actual}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.4}{Conceptos previos}{chapter.2}% 11
+\BOOKMARK [0][-]{chapter.3}{Análisis, arquitectura y diseño del sistema}{}% 12
+\BOOKMARK [1][-]{section.3.1}{Análisis}{chapter.3}% 13
+\BOOKMARK [2][-]{subsection.3.1.1}{Descripción del producto}{section.3.1}% 14
+\BOOKMARK [2][-]{subsection.3.1.2}{Viabilidad}{section.3.1}% 15
+\BOOKMARK [2][-]{subsection.3.1.3}{Objetivos y funcionalidad}{section.3.1}% 16
+\BOOKMARK [2][-]{subsection.3.1.4}{Requisitos}{section.3.1}% 17
+\BOOKMARK [2][-]{subsection.3.1.5}{Tamaño y rendimiento}{section.3.1}% 18
+\BOOKMARK [1][-]{section.3.2}{Arquitectura}{chapter.3}% 19
+\BOOKMARK [2][-]{subsection.3.2.1}{Vista estática}{section.3.2}% 20
+\BOOKMARK [2][-]{subsection.3.2.2}{Vista funcional}{section.3.2}% 21
+\BOOKMARK [2][-]{subsection.3.2.3}{Vista dinámica}{section.3.2}% 22
+\BOOKMARK [1][-]{section.3.3}{Diseño}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.3.1}{Servidor de vídeo}{section.3.3}% 24
+\BOOKMARK [2][-]{subsection.3.3.2}{Servidor de control}{section.3.3}% 25
+\BOOKMARK [2][-]{subsection.3.3.3}{Cliente móvil}{section.3.3}% 26
+\BOOKMARK [0][-]{chapter.4}{Implementación}{}% 27
+\BOOKMARK [1][-]{section.4.1}{Cliente}{chapter.4}% 28
+\BOOKMARK [2][-]{subsection.4.1.1}{Fundamentos de programación para Android con Android Studio}{section.4.1}% 29
+\BOOKMARK [2][-]{subsection.4.1.2}{Aplicación}{section.4.1}% 30
+\BOOKMARK [1][-]{section.4.2}{Servidores de vídeo}{chapter.4}% 31
+\BOOKMARK [2][-]{subsection.4.2.1}{Streaming multimedia, códecs y formatos de vídeo}{section.4.2}% 32
+\BOOKMARK [2][-]{subsection.4.2.2}{Configuración del servidor}{section.4.2}% 33
+\BOOKMARK [1][-]{section.4.3}{Servidor de control}{chapter.4}% 34
+\BOOKMARK [2][-]{subsection.4.3.1}{Servomotor y arduino}{section.4.3}% 35
+\BOOKMARK [2][-]{subsection.4.3.2}{Cliente/servidor UDP}{section.4.3}% 36
+\BOOKMARK [2][-]{subsection.4.3.3}{Programación del arduino}{section.4.3}% 37
+\BOOKMARK [2][-]{subsection.4.3.4}{Programación del servidor}{section.4.3}% 38
+\BOOKMARK [0][-]{chapter.5}{Pruebas y resultados}{}% 39
+\BOOKMARK [1][-]{section.5.1}{Calidad de servicio}{chapter.5}% 40
+\BOOKMARK [2][-]{subsection.5.1.1}{Servidores}{section.5.1}% 41
+\BOOKMARK [2][-]{subsection.5.1.2}{Clientes}{section.5.1}% 42
+\BOOKMARK [2][-]{subsection.5.1.3}{Interfaces}{section.5.1}% 43
+\BOOKMARK [2][-]{subsection.5.1.4}{Pruebas significativas \(combinaciones de los 3 anteriores\)}{section.5.1}% 44
+\BOOKMARK [1][-]{section.5.2}{Cámaras}{chapter.5}% 45
+\BOOKMARK [1][-]{section.5.3}{Servomotor}{chapter.5}% 46
+\BOOKMARK [1][-]{section.5.4}{Experimentos del sistema completo}{chapter.5}% 47
+\BOOKMARK [1][-]{section.5.5}{Resultados}{chapter.5}% 48
+\BOOKMARK [0][-]{chapter.6}{Conclusiones y trabajo futuro}{}% 49
+\BOOKMARK [1][-]{section.6.1}{Conclusiones}{chapter.6}% 50
+\BOOKMARK [1][-]{section.6.2}{Trabajo futuro}{chapter.6}% 51
+\BOOKMARK [0][-]{chapter*.72}{Glosario de acrónimos}{}% 52
+\BOOKMARK [0][-]{chapter*.72}{Bibliografía}{}% 53
+\BOOKMARK [0][-]{appendix.Alph1}{Fragmentos de código}{}% 54
+\BOOKMARK [1][-]{section.Alph1.1}{Cliente}{appendix.Alph1}% 55
+\BOOKMARK [2][-]{subsection.Alph1.1.1}{AddressManager.java}{section.Alph1.1}% 56
+\BOOKMARK [2][-]{subsection.Alph1.1.2}{PositionSender.java}{section.Alph1.1}% 57
+\BOOKMARK [2][-]{subsection.Alph1.1.3}{FormActivity.java}{section.Alph1.1}% 58
+\BOOKMARK [2][-]{subsection.Alph1.1.4}{MainActivity.java}{section.Alph1.1}% 59
+\BOOKMARK [1][-]{section.Alph1.2}{Servidores de vídeo}{appendix.Alph1}% 60
+\BOOKMARK [2][-]{subsection.Alph1.2.1}{deploy.sh}{section.Alph1.2}% 61
+\BOOKMARK [1][-]{section.Alph1.3}{Servidor de control}{appendix.Alph1}% 62
+\BOOKMARK [2][-]{subsection.Alph1.3.1}{servo\137serial\137read.ino}{section.Alph1.3}% 63
+\BOOKMARK [2][-]{subsection.Alph1.3.2}{control\137servo.py}{section.Alph1.3}% 64
+\BOOKMARK [2][-]{subsection.Alph1.3.3}{udp\137server.py}{section.Alph1.3}% 65
+\BOOKMARK [0][-]{appendix.Alph2}{Manual de usuario}{}% 66
+\BOOKMARK [1][-]{section.Alph2.1}{Repositorio}{appendix.Alph2}% 67
+\BOOKMARK [1][-]{section.Alph2.2}{Uso}{appendix.Alph2}% 68
+\BOOKMARK [2][-]{subsection.Alph2.2.1}{Despliegue de los servidores de vídeo}{section.Alph2.2}% 69
+\BOOKMARK [2][-]{subsection.Alph2.2.2}{Código arduino}{section.Alph2.2}% 70
+\BOOKMARK [2][-]{subsection.Alph2.2.3}{Despliegue de los servidores de vídeo}{section.Alph2.2}% 71
+\BOOKMARK [2][-]{subsection.Alph2.2.4}{Despliegue de los servidores de vídeo}{section.Alph2.2}% 72

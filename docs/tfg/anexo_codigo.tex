@@ -1,0 +1,176 @@
+\chapter{Fragmentos de código}
+\label{Anexo:codigo}
+
+A continuación se muestran los fragmentos de código más relevantes de cada uno de los componentes del sistema, con el fin de ayudar al lector a comprender las decisiones de implementación.
+
+\lsection{Cliente}
+
+%\lstinputlisting[language=XML, firstline=1, lastline=106]{../01-CardboardApps/SurfaceViewCarboard/app/src/main/res/layout/form.xml}
+
+\subsection{AddressManager.java}
+%\todo[inline]{Anexo código: \currentname}
+
+\begin{figure}[H]
+	\inputminted[firstline=7,lastline=12]{java}{../01-CardboardApps/SurfaceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/AddressManager.java}
+	\caption{\textbf{Patrón de diseño \textit{Singleton}}. La única instancia de esta clase puede ser referenciada invocando al método público y estático \textit{getInstance()}}
+	\label{fig:addressmanager_singleton}
+\end{figure}
+
+\begin{figure}[H]
+	\inputminted[firstline=13,lastline=18]{java}{../01-CardboardApps/SurfaceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/AddressManager.java}
+	\caption{\textbf{Atributos de la instancia}. Estos son los datos que se almacenan en esta clase. Sus correspondientes \textit{getters} y \textit{setters} son de acceso público}
+	\label{fig:addressmanager_atributos}
+\end{figure}
+
+\subsection{PositionSender.java}
+%\todo[inline]{Anexo código: \currentname}
+
+\begin{figure}[H]
+	\inputminted[firstline=17,lastline=24]{java}{../01-CardboardApps/SurfaceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/PositionSender.java}
+	\caption{\textbf{Atributos de la clase}. }
+	\label{fig:positionsender_atributos}
+\end{figure}
+
+\begin{figure}[H]
+	\inputminted[firstline=27,lastline=33]{java}{../01-CardboardApps/SurfaceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/PositionSender.java}
+	\caption{\textbf{Método constructor}. }
+	\label{fig:positionsender_constructor}
+\end{figure}
+
+\begin{figure}[H]
+	\inputminted[firstline=36,lastline=41]{java}{../01-CardboardApps/SurfaceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/PositionSender.java}
+	\caption{\textbf{Método \textit{send()}}. Este método se encarga de enviar un mensaje, en forma de una cadena de caracteres, a través del socket UDP previamente inicializado en el constructor.}
+	\label{fig:positionsender_send}
+\end{figure}
+
+
+\subsection{FormActivity.java}
+%\todo[inline]{Anexo código: \currentname}
+
+\begin{figure}[H]
+	\inputminted[firstline=12,lastline=22]{java}{../01-CardboardApps/SurfaceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/FormActivity.java}
+	\caption{\textbf{Definición de la clase, AddressManager y \textit{onCreate()}}. }
+	\label{fig:formactivity_clase}
+\end{figure}
+
+\begin{figure}[H]
+	\inputminted[firstline=24,lastline=49]{java}{../01-CardboardApps/SurfaceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/FormActivity.java}
+	\caption{\textbf{Método \textit{updateValues()}}. Controlador del botón \enquote{Update values}. Accede a los \textit{EditText} de la vista y los almacena en el modelo (AddressManager)}
+	\label{fig:formactivity_updatevalues}
+\end{figure}
+
+\begin{figure}[H]
+	\inputminted[firstline=52,lastline=57]{java}{../01-CardboardApps/SurfaceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/FormActivity.java}
+	\caption{\textbf{Método \textit{nextActivity()}}. }
+	\label{fig:formactivity_nextactivity}
+\end{figure}
+
+
+\subsection{MainActivity.java}
+
+\begin{figure}[H]
+	\inputminted[firstline=91,lastline=110]{java}{../01-CardboardApps/SurfaceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/MainActivity.java}
+	\caption{\textbf{Inicialización de objeto VideoView}. El mismo proceso se realiza para myVideoViewRight y ambos comparten el mismo MediaController.}
+	\label{fig:mainactivity_videoviewinit}
+\end{figure}
+
+\begin{figure}[H]
+	\inputminted[firstline=133,lastline=142]{java}{../01-CardboardApps/SurfaceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/MainActivity.java}
+	\caption{\textbf{Acceso a los sensores y creación del objeto \textit{PositionSender}}: }
+	\label{fig:mainactivity_setupsensorposition}
+\end{figure}
+
+\begin{figure}[H]
+	\inputminted[firstline=161,lastline=174]{java}{../01-CardboardApps/SurfaceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/MainActivity.java}
+	\caption{Hilo de envío de la posición al servidor de control}
+	\label{fig:mainactivity_hilosender}
+\end{figure}
+
+\begin{figure}[H]
+	\inputminted[firstline=181,lastline=212]{java}{../01-CardboardApps/SurfaceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/MainActivity.java}
+	\caption{\textbf{Método \textit{onSensorChanged()}}: Realiza el cálculo de las coordenadas polares (figura~\ref{fig:coordenadas_polares}) cada vez que los sensores cambian de valor.}
+	\label{fig:mainactivity_onsensorchanged}
+\end{figure}
+
+\begin{figure}[H]
+	\inputminted[firstline=278,lastline=285]{java}{../01-CardboardApps/SurfaceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/MainActivity.java}
+	\caption{\textbf{Método \textit{onBackPressed()}}: }
+	\label{fig:mainactivity_onbackpressed}
+\end{figure}
+
+
+\lsection{Servidores de vídeo}
+
+\subsection{deploy.sh}
+\begin{figure}[H]
+	\inputminted[firstline=1,lastline=11]{bash}{../02-UDPStreamers/VLCRtpServer/deploy.sh}
+	\caption{Script de despliegue de los servidores multimedia}
+	\label{fig:despliegue_servidores_video}
+\end{figure}	
+
+\lsection{Servidor de control}
+
+\subsection{servo\_serial\_read.ino}
+\begin{figure}[H]
+	\inputminted[firstline=1,lastline=8]{cpp}{../03-ServoServers/ArduinoCode/servo_serial_write/servo_serial_write.ino}
+	\caption{\textbf{Cabecera del código del Arduino}}
+	\label{fig:header_arduino}
+\end{figure}	
+
+
+\begin{figure}[H]
+	\inputminted[firstline=9,lastline=27]{cpp}{../03-ServoServers/ArduinoCode/servo_serial_write/servo_serial_write.ino}
+	\caption{\textbf{Función auxiliar \textit{myRead()}}. Lee caracter a caracter del puerto serial hasta encontrar el valor '\textbackslash n' y convierte la cadena de caracteres obtenida en un valor numérico}
+	\label{fig:my_read_arduino}
+\end{figure}	
+%
+
+\begin{figure}[H]
+	\inputminted[firstline=27,lastline=34]{cpp}{../03-ServoServers/ArduinoCode/servo_serial_write/servo_serial_write.ino}
+	\caption{\textbf{Función \textit{setup()} de Arduino}. Esta función se ejecuta al arrancarse la placa}
+	\label{fig:setup_arduino}
+\end{figure}	
+
+
+\begin{figure}[H]
+	\inputminted[firstline=36,lastline=43]{cpp}{../03-ServoServers/ArduinoCode/servo_serial_write/servo_serial_write.ino}
+	\caption{\textbf{Función \textit{loop()} de Arduino}. Esta función se ejecuta indefinidamente después de ejecutarse \textit{setup()}}
+	\label{fig:loop_arduino}
+\end{figure}	
+
+\subsection{control\_servo.py}
+%\todo[inline]{Anexo código: \currentname}
+\begin{figure}[H]
+	\inputminted[firstline=28,lastline=34]{python}{../03-ServoServers/ServoControlPython/control_servo.py}
+	\caption{\textbf{Definición de la clase y constructor de \textit{ServoControl}}. El ángulo inicial es $\Psi_0 = 0^\circ$. El constructor crea un objeto \textit{Serial} en el puerto 9600 a partir de su ruta en el sistema operativo.}
+	\label{fig:controlservo_clase}
+\end{figure}
+
+\begin{figure}[H]
+	\inputminted[firstline=62,lastline=83]{python}{../03-ServoServers/ServoControlPython/control_servo.py}
+	\caption{\textbf{Definición de la clase y constructor de \textit{ServoControl}}. }
+	\label{fig:controlservo_moveangle}
+\end{figure}
+
+\subsection{udp\_server.py}
+
+\begin{figure}[H]
+	\inputminted[firstline=7,lastline=16]{python}{../03-ServoServers/ServoControlPython/udp_server.py}
+	\caption{\textbf{Inicialización de recursos del servidor de control}. }
+	\label{fig:setup_udp_server}
+\end{figure}
+
+\begin{figure}[H]
+	\inputminted[firstline=17,lastline=28]{python}{../03-ServoServers/ServoControlPython/udp_server.py}
+	\caption{\textbf{Bucle del servidor de control}. }
+	\label{fig:loop_udp_server}
+\end{figure}
+
+
+%\begin{listing}[ht]
+%\inputminted{java}{../01-CardboardApps/SurfaceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/MainActivity.java}
+%\caption{Example from external file}
+%\label{listing:3}
+%\end{listing}
+
+\newpage \thispagestyle{empty} % Página vacía 

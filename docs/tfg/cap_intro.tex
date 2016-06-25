@@ -1,0 +1,69 @@
+\chapter{Introducción} 
+\label{chap:intro}
+
+\vspace{-0.2cm}
+
+\lsection{Motivación del proyecto}
+
+Mi motivación personal a la hora de embarcarme en este proyecto es la de crear un sistema heterogéneo, investigando así campos como la programación para dispositivos móviles (en este caso, para Android) y las redes multimedia, materias en las que era más bien inexperto antes de comenzar con este trabajo. Por otra parte, mi experiencia en las prácticas de empresa que realicé en el proyecto de emprendimiento The Haptic Eye me animaron a llevar a cabo otro proyecto innovador, en tiempo real y que reúna tecnologías punteras en el estado del arte.
+
+
+\lsection{Objetivos y enfoque}
+
+% Esto quizás en el abstract mejor
+A modo de síntesis, el objetivo inicial es desarrollar un sistema que proporcionara visión remota al
+usuario mediante de un smartphone conectado, a través de Internet, con un robot con dos cámaras
+como si este último se tratase de un avatar.
+
+El sistema consta, principalmente, de dos partes:
+\begin{enumerate}  
+\item Un Google Cardboard ~ y un teléfono móvil con Android desde el que ejecutar la
+aplicación. Ésta estará desarrollada utilizando la API de Google Cardboard [2]. En vez de
+renderizar gráficos en 3D (Figura~\ref{fig:cardboard_3d}), simplemente se reproducirán en tiempo real simultáneamente
+dos vídeos (uno para cada ojo).
+
+
+\begin{figure}[h]
+	\centerline{
+		\mbox{\includegraphics[width=3.00in]{images/cube2.png}}
+	}
+	\caption{\textbf{Ejemplo de aplicación para Google Cardboard}. Utiliza OpenGL para renderizar los gráficos y los muestra para adaptarse a cada ojo.}
+	\label{fig:cardboard_3d}
+\end{figure}
+
+
+\item Un pequeño robot con las siguientes características:
+\end{enumerate}
+\begin{itemize}
+\item Dos videocámaras.
+\item Una estructura donde alojar estas dos cámaras.
+\item Un motor que haga girar esta estructura sobre el eje vertical (Figura~\ref{fig:movimiento_cabeza})
+\item Conectividad con la aplicación a través de Internet.
+\end{itemize}
+
+\begin{figure}[h]
+	\centerline{
+		\mbox{\includegraphics[width=3.00in]{images/movimiento_cabeza.png}}
+	}
+	\caption{\textbf{Movimiento de la cabeza} alrededor del eje vertical}
+	\label{fig:movimiento_cabeza}
+\end{figure}
+
+\begin{figure}[h]
+	\centerline{
+		\mbox{\includegraphics[width=3.00in]{images/googlecardboard.jpg}}
+	}
+	\caption{\textbf{Google Carbdoard}: las gafas de realidad virtual a partir de unas lentes, cartón y un smartphone}
+	\label{fig:googlecardboard}
+\end{figure}
+
+La aplicación recibirá como entrada dos streams correspondientes a las cámaras de la
+segunda parte y la posición en la que esta parte se encuentra (aunque en la práctica esto último
+quizás no haga falta). Como salida, enviará la posición en la que se encuentra la cabeza del usuario
+como comandos que el subsistema 2 procesará y convertirá en instrucciones para los motores que
+mueven su estructura.
+
+
+\lsection{Metodología y plan de trabajo}
+
+\newpage \thispagestyle{empty} % Página vacía 

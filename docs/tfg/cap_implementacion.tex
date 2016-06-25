@@ -1,0 +1,123 @@
+\chapter{Implementación}
+\label{chap:implementacion}
+
+
+\lsection{Cliente}
+\subsection{Fundamentos de programación para Android con Android Studio}
+\todo[inline]{Implementación: \currentname}
+\textbf{Referencias a libro de Android de la biblioteca}
+\begin{itemize}
+\item Activity
+\item Layout
+\item Interfaces handler (?)
+\end{itemize}
+\subsection{Aplicación}
+
+Está compuesta por 4 clases escritas en Java, de las cuales 2 extienden a la clase Android.Activity y las otras 2 son clases auxiliares. 
+
+\subsubsection{Gestor de direcciones}
+
+Esta clase implementa el patrón de diseño \textit{Singleton} (fragmento~\ref{fig:addressmanager_singleton}). Forma parte del modelo de la aplicación y almacena las direcciones y puertos de los servidores. Permite leer y escribir estos datos (fragmento~\ref{fig:addressmanager_atributos}) independientemente de la actividad en la que se encuentre el usuario a través de sus métodos de acceso públicos (\textit{getters} y \textit{setters}).
+
+
+\subsubsection{Transmisor de posición}
+
+Esta sencilla clase auxiliar está asociada a un socket UDP que se crea en el constructor de esta misma, asociado a su vez a un puerto y una dirección IP determinadas (fragmento~\ref{fig:positionsender_constructor}). Encapsula las operaciones básicas con sockets, haciendo más sencilla la comunicación con el servidor de control a nivel de programación (fragmento~\ref{fig:positionsender_send}).
+
+\subsubsection{Formulario}
+
+Esta actividad se muestra al iniciar la app. Al iniciarse, carga su layout a partir del fichero \textit{form.xml} y guarda la referencia a la instancia única del gestor de direcciones (fragmento~\ref{fig:formactivity_clase}). Las direcciones de sendos servidores multimedia con los streamings de vídeo han de ser indicadas mediante la URI completa, mientras que el servidor de control ha de indicarse introduciendo la dirección IP de la máquina en la que se encuentra alojado el servidor y el puerto por separado. Los valores que se muestran en la figura~\ref{fig:captura_formulario} son los valores por defecto de estos \textit{textboxs} que coinciden con las direcciones en las que se despliegan los servidores en el entorno de trabajo para agilizar así las pruebas.
+
+En el archivo XML asociado a esta actividad, también se indica el nombre de los \textit{handlers} de los botones; es decir, la función que se ejecutará al clickar sobre cada uno de estos dos elementos. Así pues, esta clase debe implementarlos. Al presionar el botón \textit{Update values}, esta clase accede al valor de todos los \textit{textboxs} y los almacena en el gestor anteriormente explicado (fragmento~\ref{fig:formactivity_updatevalues}). Al presionar el segundo botón, se abandona esta actividad y se inicia la aplicación principal, \textit{MainActivity} (fragmento~\ref{fig:formactivity_nextactivity}).
+
+
+\begin{figure}[h]
+	\centerline{
+		\mbox{\includegraphics[width=4.00in]{images/captura_formulario.jpg}}
+	}
+	\caption{\textbf{Formulario de la aplicación móvil}. Permite al usuario modificar las direcciones de los tres servidores}
+	\label{fig:captura_formulario}
+\end{figure}
+
+
+\subsubsection{Actividad principal}
+
+Como en la actividad del formulario, al crearse se guarda la referencia al \textit{Singleton} y se carga el \textit{layout} a partir de su correspondiente archivo XML. En éste se indica que habrá dos vistas, correspondientes a sendos \textit{streams} de vídeo, ocupando la pantalla completa mitad y mitad.
+
+\begin{itemize}
+
+\item Seguidamente, se crean dos reproductores de vídeo que se situarán en estas dos vistas. En los constructores de estos objetos se pasan como parámetros las URI de los dos \textit{streams}, lo que hará que los vídeos se reproduzcan tan pronto como estos dos recursos estén disponibles (fragmento~\ref{fig:mainactivity_videoviewinit}). 
+\item Se obtienen las referencias a los sensores a través del sistema operativo, mediante los cuales se calcularán las rotaciones del dispositivo móvil. Estos son el acelerómetro y la brújula.
+\item Se instancia un objeto de la clase Sender a partir de la IP y el puerto del servidor de control almacenados en el \textit{Singleton} (fragmento~\ref{fig:mainactivity_setupsensorposition})
+\item Se crea el hilo que se encargue de enviar constantemente la posición, como se muestra en la figura~\ref{fig:coordenadas_polares}). A priori, la solución más obvia es crear una clase que implemente la interfaz \textit{Runnable} y empezar un hilo mediante la clase \textit{Thread}. Tras este intento, el sistema operativo elimina este hilo porque, al parecer, consume mucha CPU, lo cual no permite a la actividad principal refrescar la interfaz gráfica. Es decir, genera inanición. Como solución y después de investigar este contratiempo, encontré la clase \textit{Handler} con su método de instancia \textit{postdelayed}. Esencialmente, se inicializa este \textit{Hanlder} con un objeto que implemente \textit{Runnable} y postdelayed crea una alarma que se activará después de un determinado número de milisegundos pasado como parámetro. Al activarse, se ejecute el método \textit{run()} de este handler. Con esto, creamos un objeto \textit{Runnable} que ejecute una vez el cuerpo del bucle y finalmente vuelva a montar la alarma, como si se tratase de una recursión infinita (fragmento~\ref{fig:mainactivity_hilosender}).
+
+\end{itemize}
+
+
+\lsection{Servidores de vídeo}
+\subsection{Streaming multimedia, códecs y formatos de vídeo}
+\todo[inline]{Implementación: \currentname}
+\subsection{Configuración del servidor}
+
+Para los servidores de vídeo, finalmente se ha utilizado el comando \textbf{cvlc}, herramienta de VLC para la terminal. Ésta ofrece una inmensidad de servicios, entre los cuales no interesa la posibilidad de desplegar servidores multimedia. La configuración de estos se indica junto con este comando en una cadena de caracteres que vendrá a definir el pipeline que se ejecutará para dicho servidor. Un pipeline consta, en resumen, de estos elementos:
+
+\begin{enumerate}
+\item Entrada (\textit{Input Source})
+\item Operaciones intermedias (\textit{Transcode})
+\item Salida (\textit{Output Stream})
+\end{enumerate}
+
+Como entrada, se especifica la videocámara por su ruta dentro del sistema de ficheros y se abre en este caso con V4L2 que es una API de captura de vídeo y está integrada en el kernel de linux.
+
+Con esta fuente, se forma el vídeo en sí. El códec de vídeo elegido ha sido el \textbf{H264}. Este formato tiene decenas y decenas de variables y parámetros. Ya que el objetivo de este proyecto no era el de realizar una tarea de optimización tan intensa, se ha recurrrido a lo que se llaman \textit{presets}, que dan valor al conjunto de parámetros del códec para ofrecer una determinada calidad y rendimiento. Se ha configurado de forma que sea lo más rápido posible y que tenga una menor latencia. Finalmente, se indica la resolución de salida para que se corresponda justo lo que ocupará en la aplicación de móvil (la mitad de la resolución de la pantalla táctil) y también se indican los FPS).
+
+Finalmente, se indica que la salida del pipeline será un servidor RSTP, en el cual se enviarán los datos a través de RTP y cuyos datos de sesión se guardarán en un archivo SDP, que se encontará en la dirección física de la propia máquina en la que se ejecute el script y en el puerto indicado.
+
+El código completo del script se encuentra en la figura ~\ref{fig:despliegue_servidores_video}
+1
+
+\lsection{Servidor de control}
+
+\subsection{Servomotor y arduino}
+
+\begin{figure}[H]
+	\centerline{
+		\mbox{\includegraphics[width=4.00in]{images/circuito_arduino.png}}
+	}
+	\caption{\textbf{Circuito del Arduino controlando el servomotor}. El cable rojo va a VCC (3.3V) de la placa arduino, el cable negro a GND (tierra) y el cable blanco al PWM correspondiente. Variando el valor de la señal analógica del PWM, conseguimos cambiar de sentido y de intensidad. }
+	\label{fig:circuito_arduino}
+\end{figure}
+
+
+\subsection{Cliente/servidor UDP}
+\todo[inline]{Implementación: \currentname}
+\subsection{Programación del arduino}
+
+Se ha utilizado la librería \cite{online:varspeedservo} para el control del servomotor.
+
+\subsection{Programación del servidor}
+Para la implementación de este servidor, se ha elegido Python 2.7 como lenguaje de programación por los siguientes motivos:
+\begin{itemize}
+\item Es un lenguaje de muy alto nivel, potente, rápido de programar y fácil de depurar.
+\item El módulo \textbf{socket} proporciona un manejo de bajo nivel de los propios sockets del sistema operativo que en realidad encapsula estas funciones propias de C/C++ en UNIX.
+\item El módulo \textbf{serial} permite al programador acceder a cierto puerto serial para efectuar operaciones de lectura y escritura abstrayéndose del protocolo USB a bajo nivel.
+\end{itemize}
+
+\subsubsection{ServoController}
+El constructor de esta clase intenta abrir el puerto serial donde ha de encontrarse conectado el Arduino y lanza una excepción cuando la apertura falla. Después, simplemente se invoca al método \textit{moveAngle()} que recibe un ángulo como parámetro. Una instancia de esta clase siempre guarda internamente el último ángulo recibido a través de este método (inicializándolo en 0 grados) y el ángulo que debe desplazarse se calcula mediante la diferencia con esta referencia. Es decir, el incremento del ángulo es relativo al ángulo inmediatamente anterior. Ya que el tipo de motor no es preciso a la hora de desplazar un ángulo en concreto, se ha tomado la siguiente decisión de implementación: se ha creado un diccionario en el cual las claves son un ángulo en concreto, múltiplo de 45 y de -180 a 180. Los valores, son el valor analógico que hay que pasarle al arduino para que gire, aproximadamente, esa cantidad de grados. Por tanto, el valor que se enviará a través del puerto serial será el valor para la clave que más se aproxime a la diferencia entre el nuevo ángulo y el ángulo anterior (es decir, el incremento).
+
+\subsubsection{UDP server}	
+Éste es el programa que se encarga de realizar todas las tareas necesarias para desplegar el servidor de control en la máquina en la que se ejecute.
+\begin{itemize}
+\item Al ejecutarse el proceso, se crea un socket UDP.
+\item Se obtienen la dirección IP y el puerto que son pasados como argumentos al ejecutar el programa.
+\item Se vincula el socket a esta dirección a través del método \textit{bind()}
+\item Se intenta crear una instancia de \textit{ServoController}. Si hubiese un fallo, termina la aplicación indicando el error que lo produjo.
+\item Comienza el propio bucle del servidor:
+	\begin{enumerate}
+	\item Recibe de forma bloqueante del socket y muestra los datos recibidos.
+	\item Parsea el mensaje para convertirlo de una cadena de caracteres a un número en coma flotante.
+	\item Llama al método \textit{moveAngle()} de la instancia de \textit{ServoController} para realizar el movimiento angular
+\end{enumerate}	
+\end{itemize}
+

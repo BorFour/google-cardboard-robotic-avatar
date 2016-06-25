@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/cameraLeftText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/cameraLeft" />
+
+    <EditText
+        android:id="@+id/cameraLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="rtsp://192.168.1.33:8554/"
+        android:ems="10" android:inputType="text"
+        android:layout_alignTop="@+id/cameraLeftText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/controlServerPortText"
+        android:layout_toRightOf="@+id/controlServerPortText" />
+
+    <TextView
+        android:id="@+id/cameraRightText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cameraLeftText"
+        android:layout_below="@+id/cameraLeft"
+        android:layout_marginTop="26dp"
+        android:text="@string/cameraRight" />
+
+    <EditText
+        android:id="@+id/cameraRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cameraRightText"
+        android:text="rtsp://192.168.1.33:8556/"
+        android:ems="10" android:inputType="text"
+        android:layout_alignLeft="@+id/cameraLeft"
+        android:layout_alignStart="@+id/cameraLeft"
+        android:layout_alignRight="@+id/cameraLeft"
+        android:layout_alignEnd="@+id/cameraLeft" />
+
+    <TextView
+        android:id="@+id/controlServerAddressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cameraRightText"
+        android:layout_below="@+id/cameraRight"
+        android:layout_marginTop="26dp"
+        android:text="@string/controlServerAddress" />
+
+
+    <EditText
+        android:id="@+id/controlServerAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/controlServerAddressText"
+        android:ems="10" android:inputType="text"
+        android:text="192.168.1.33" />
+    <TextView
+        android:id="@+id/controlServerPortText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/controlServerAddressText"
+        android:layout_below="@+id/controlServerAddressText"
+        android:layout_marginTop="26dp"
+        android:text="@string/controlServerPort" />
+
+
+    <EditText
+        android:id="@+id/controlServerPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/controlServerPortText"
+        android:ems="10" android:inputType="text"
+        android:layout_alignLeft="@+id/controlServerAddress"
+        android:text="8558"
+        android:layout_alignStart="@+id/controlServerAddress" />
+
+    <Button
+        android:id="@+id/buttonUpdateValues"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/controlServerPort"
+        android:text="@string/updateValues"
+        android:onClick="updateValues"
+        android:layout_width="fill_parent">
+    </Button>
+
+    <Button
+        android:id="@+id/buttonNextActivity"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonUpdateValues"
+        android:text="@string/nextActivity"
+        android:onClick="nextActivity"
+        android:layout_width="fill_parent">
+    </Button>
+
+</RelativeLayout>
