@@ -31,7 +31,7 @@ void setup() {
   while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
   }
-  myservo.attach(3);  // attaches the servo on pin 9 to the servo object
+  myservo.attach(3);  // attaches the servo on pin 3 to the servo object
 }
 
 void loop() {

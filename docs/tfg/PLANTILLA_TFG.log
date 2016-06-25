@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.18)  25 JUN 2016 17:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.18)  25 JUN 2016 18:00
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -928,20 +928,20 @@ LaTeX Info: Redefining \% on input line 27.
 )
 \openout1 = `PLANTILLA_TFG.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -977,8 +977,8 @@ LaTeX Font Info:    ... okay on input line 98.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \. on input line 98.
-LaTeX Info: Redefining \% on input line 98.
+LaTeX Info: Redefining \. on input line 107.
+LaTeX Info: Redefining \% on input line 107.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count186
@@ -1007,26 +1007,26 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 98.
+LaTeX Font Info:    Try loading font information for U+msa on input line 107.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 98.
+LaTeX Font Info:    Try loading font information for U+msb on input line 107.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package xypdf Info: Line width: 0.43799pt on input line 98.
+Package xypdf Info: Line width: 0.43799pt on input line 107.
 \c@lstlisting=\count192
 runsystem(pygmentize -S default -f latex > PLANTILLA_TFG.pyg)...executed.
 
  (./PLANTILLA_TFG.pyg) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box54
-Package hyperref Info: Link coloring OFF on input line 98.
-LaTeX Info: Redefining \ref on input line 98.
-LaTeX Info: Redefining \pageref on input line 98.
-LaTeX Info: Redefining \nameref on input line 98.
+Package hyperref Info: Link coloring OFF on input line 107.
+LaTeX Info: Redefining \ref on input line 107.
+LaTeX Info: Redefining \pageref on input line 107.
+LaTeX Info: Redefining \nameref on input line 107.
  (./PLANTILLA_TFG.out)
 (./PLANTILLA_TFG.out)
 \@outlinefile=\write9
@@ -1102,29 +1102,29 @@ Non-PDF special ignored!
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/logo_eps-eps-conv
 erted-to.pdf> <./images/logo_uam-eps-converted-to.pdf>])
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 113.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 113.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 113.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 113.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 113.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 113.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 113.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 113.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 113.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 113.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 113.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 113.
  [2
 
 ] (./primera_pag.tex
@@ -1261,29 +1261,29 @@ Package xcolor Warning: Incompatible color definition on input line 1.
 
 )
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
  [5
 
 ]
@@ -1294,63 +1294,63 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 122.
 [6
 
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 113.
+Package xcolor Warning: Incompatible color definition on input line 122.
 
 (./PLANTILLA_TFG.tdo)
 \tf@tdo=\write10
 \openout10 = `PLANTILLA_TFG.tdo'.
 
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
  [7]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1359,34 +1359,34 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 123.
 [8
 
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 114.
+Package xcolor Warning: Incompatible color definition on input line 123.
 
 (./PLANTILLA_TFG.toc
 LaTeX Info: Redefining \. on input line 1.
@@ -1461,74 +1461,74 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-LaTeX Info: Redefining \. on input line 116.
-LaTeX Info: Redefining \% on input line 116.
+LaTeX Info: Redefining \. on input line 125.
+LaTeX Info: Redefining \% on input line 125.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 125.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 125.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 125.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 125.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 125.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 125.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 125.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 125.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 125.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 125.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 125.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 125.
 [11]
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 127.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 127.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 127.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 127.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 127.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 127.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 129.
  [12
 
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 120.
+Package xcolor Warning: Incompatible color definition on input line 129.
 
 (./PLANTILLA_TFG.lof
 LaTeX Info: Redefining \. on input line 1.
@@ -1570,48 +1570,48 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-LaTeX Info: Redefining \. on input line 122.
-LaTeX Info: Redefining \% on input line 122.
+LaTeX Info: Redefining \. on input line 131.
+LaTeX Info: Redefining \% on input line 131.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 131.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 131.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 131.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 131.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 131.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 131.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 131.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 131.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 131.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 131.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 131.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 131.
 [14]
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 133.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 133.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 133.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 133.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 133.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 133.
 
 
-Package xcolor Warning: Incompatible color definition on input line 126.
+Package xcolor Warning: Incompatible color definition on input line 135.
 
 (./PLANTILLA_TFG.lot
 LaTeX Info: Redefining \. on input line 1.
@@ -1623,56 +1623,56 @@ LaTeX Info: Redefining \% on input line 2.
 \openout13 = `PLANTILLA_TFG.lot'.
 
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 137.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 137.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 137.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 137.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 137.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 137.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 137.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 137.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 137.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 137.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 137.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 137.
  [15
 
 ]
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 130.
+(babel)             in language  on input line 139.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 130.
+(babel)             in language  on input line 139.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 130.
+(babel)             in language  on input line 139.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 130.
+(babel)             in language  on input line 139.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 130.
+(babel)             in language  on input line 139.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 130.
+(babel)             in language  on input line 139.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 130.
+(babel)             in language  on input line 139.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 130.
+(babel)             in language  on input line 139.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 130.
+(babel)             in language  on input line 139.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 130.
+(babel)             in language  on input line 139.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 130.
+(babel)             in language  on input line 139.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 130.
+(babel)             in language  on input line 139.
  [16
 
 ] (./cap_intro.tex
@@ -3339,9 +3339,9 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 10.
 runsystem(pygmentize -l java -f latex -F tokenmerge             -P "verboptions
-= ,firstline=7,lastline=12" -o PLANTILLA_TFG.out.pyg ../01-CardboardApps/Surfac
-eViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/AddressMa
-nager.java)...executed.
+= ,firstline=7,lastline=12" -o PLANTILLA_TFG.out.pyg ../../src/AndroidClient//a
+pp/src/main/java/com/example/borch/surfaceviewcarboard/AddressManager.java)...e
+xecuted.
 
 (./PLANTILLA_TFG.out.pyg
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 1.
@@ -3355,9 +3355,9 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
 runsystem(rm PLANTILLA_TFG.out.pyg)...executed.
 
 runsystem(pygmentize -l java -f latex -F tokenmerge             -P "verboptions
-= ,firstline=13,lastline=18" -o PLANTILLA_TFG.out.pyg ../01-CardboardApps/Surfa
-ceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/AddressM
-anager.java)...executed.
+= ,firstline=13,lastline=18" -o PLANTILLA_TFG.out.pyg ../../src/AndroidClient//
+app/src/main/java/com/example/borch/surfaceviewcarboard/AddressManager.java)...
+executed.
 
 
 (./PLANTILLA_TFG.out.pyg)
@@ -3376,9 +3376,9 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 25.
 runsystem(pygmentize -l java -f latex -F tokenmerge             -P "verboptions
-= ,firstline=17,lastline=24" -o PLANTILLA_TFG.out.pyg ../01-CardboardApps/Surfa
-ceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/Position
-Sender.java)...executed.
+= ,firstline=17,lastline=24" -o PLANTILLA_TFG.out.pyg ../../src/AndroidClient//
+app/src/main/java/com/example/borch/surfaceviewcarboard/PositionSender.java)...
+executed.
 
  (./PLANTILLA_TFG.out.pyg)
 runsystem(rm PLANTILLA_TFG.out.pyg)...executed.
@@ -3412,18 +3412,18 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 33.
  [29]
 runsystem(pygmentize -l java -f latex -F tokenmerge             -P "verboptions
-= ,firstline=27,lastline=33" -o PLANTILLA_TFG.out.pyg ../01-CardboardApps/Surfa
-ceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/Position
-Sender.java)...executed.
+= ,firstline=27,lastline=33" -o PLANTILLA_TFG.out.pyg ../../src/AndroidClient//
+app/src/main/java/com/example/borch/surfaceviewcarboard/PositionSender.java)...
+executed.
 
 
 (./PLANTILLA_TFG.out.pyg)
 runsystem(rm PLANTILLA_TFG.out.pyg)...executed.
 
 runsystem(pygmentize -l java -f latex -F tokenmerge             -P "verboptions
-= ,firstline=36,lastline=41" -o PLANTILLA_TFG.out.pyg ../01-CardboardApps/Surfa
-ceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/Position
-Sender.java)...executed.
+= ,firstline=36,lastline=41" -o PLANTILLA_TFG.out.pyg ../../src/AndroidClient//
+app/src/main/java/com/example/borch/surfaceviewcarboard/PositionSender.java)...
+executed.
 
  (./PLANTILLA_TFG.out.pyg)
 runsystem(rm PLANTILLA_TFG.out.pyg)...executed.
@@ -3441,17 +3441,17 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 47.
 runsystem(pygmentize -l java -f latex -F tokenmerge             -P "verboptions
-= ,firstline=12,lastline=22" -o PLANTILLA_TFG.out.pyg ../01-CardboardApps/Surfa
-ceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/FormActi
-vity.java)...executed.
+= ,firstline=12,lastline=22" -o PLANTILLA_TFG.out.pyg ../../src/AndroidClient//
+app/src/main/java/com/example/borch/surfaceviewcarboard/FormActivity.java)...ex
+ecuted.
 
  (./PLANTILLA_TFG.out.pyg)
 runsystem(rm PLANTILLA_TFG.out.pyg)...executed.
 
 runsystem(pygmentize -l java -f latex -F tokenmerge             -P "verboptions
-= ,firstline=24,lastline=49" -o PLANTILLA_TFG.out.pyg ../01-CardboardApps/Surfa
-ceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/FormActi
-vity.java)...executed.
+= ,firstline=24,lastline=49" -o PLANTILLA_TFG.out.pyg ../../src/AndroidClient//
+app/src/main/java/com/example/borch/surfaceviewcarboard/FormActivity.java)...ex
+ecuted.
 
 
 (./PLANTILLA_TFG.out.pyg)
@@ -3492,9 +3492,9 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 61.
 [30]
 runsystem(pygmentize -l java -f latex -F tokenmerge             -P "verboptions
-= ,firstline=52,lastline=57" -o PLANTILLA_TFG.out.pyg ../01-CardboardApps/Surfa
-ceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/FormActi
-vity.java)...executed.
+= ,firstline=52,lastline=57" -o PLANTILLA_TFG.out.pyg ../../src/AndroidClient//
+app/src/main/java/com/example/borch/surfaceviewcarboard/FormActivity.java)...ex
+ecuted.
 
  (./PLANTILLA_TFG.out.pyg)
 runsystem(rm PLANTILLA_TFG.out.pyg)...executed.
@@ -3512,9 +3512,9 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 69.
 runsystem(pygmentize -l java -f latex -F tokenmerge             -P "verboptions
-= ,firstline=91,lastline=110" -o PLANTILLA_TFG.out.pyg ../01-CardboardApps/Surf
-aceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/MainAct
-ivity.java)...executed.
+= ,firstline=91,lastline=110" -o PLANTILLA_TFG.out.pyg ../../src/AndroidClient/
+/app/src/main/java/com/example/borch/surfaceviewcarboard/MainActivity.java)...e
+xecuted.
 
  (./PLANTILLA_TFG.out.pyg)
 runsystem(rm PLANTILLA_TFG.out.pyg)...executed.
@@ -3557,17 +3557,17 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 76.
 [31]
 runsystem(pygmentize -l java -f latex -F tokenmerge             -P "verboptions
-= ,firstline=133,lastline=142" -o PLANTILLA_TFG.out.pyg ../01-CardboardApps/Sur
-faceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/MainAc
-tivity.java)...executed.
+= ,firstline=133,lastline=142" -o PLANTILLA_TFG.out.pyg ../../src/AndroidClient
+//app/src/main/java/com/example/borch/surfaceviewcarboard/MainActivity.java)...
+executed.
 
  (./PLANTILLA_TFG.out.pyg)
 runsystem(rm PLANTILLA_TFG.out.pyg)...executed.
 
 runsystem(pygmentize -l java -f latex -F tokenmerge             -P "verboptions
-= ,firstline=161,lastline=174" -o PLANTILLA_TFG.out.pyg ../01-CardboardApps/Sur
-faceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/MainAc
-tivity.java)...executed.
+= ,firstline=161,lastline=174" -o PLANTILLA_TFG.out.pyg ../../src/AndroidClient
+//app/src/main/java/com/example/borch/surfaceviewcarboard/MainActivity.java)...
+executed.
 
  (./PLANTILLA_TFG.out.pyg)
 runsystem(rm PLANTILLA_TFG.out.pyg)...executed.
@@ -3610,9 +3610,9 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 88.
 [32]
 runsystem(pygmentize -l java -f latex -F tokenmerge             -P "verboptions
-= ,firstline=181,lastline=212" -o PLANTILLA_TFG.out.pyg ../01-CardboardApps/Sur
-faceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/MainAc
-tivity.java)...executed.
+= ,firstline=181,lastline=212" -o PLANTILLA_TFG.out.pyg ../../src/AndroidClient
+//app/src/main/java/com/example/borch/surfaceviewcarboard/MainActivity.java)...
+executed.
 
  (./PLANTILLA_TFG.out.pyg)
 runsystem(rm PLANTILLA_TFG.out.pyg)...executed.
@@ -3655,9 +3655,9 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 94.
 [33]
 runsystem(pygmentize -l java -f latex -F tokenmerge             -P "verboptions
-= ,firstline=278,lastline=285" -o PLANTILLA_TFG.out.pyg ../01-CardboardApps/Sur
-faceViewCarboard/app/src/main/java/com/example/borch/surfaceviewcarboard/MainAc
-tivity.java)...executed.
+= ,firstline=278,lastline=285" -o PLANTILLA_TFG.out.pyg ../../src/AndroidClient
+//app/src/main/java/com/example/borch/surfaceviewcarboard/MainActivity.java)...
+executed.
 
  (./PLANTILLA_TFG.out.pyg)
 runsystem(rm PLANTILLA_TFG.out.pyg)...executed.
@@ -3687,8 +3687,8 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 104.
 runsystem(pygmentize -l bash -f latex -F tokenmerge             -P "verboptions
-= ,firstline=1,lastline=11" -o PLANTILLA_TFG.out.pyg ../02-UDPStreamers/VLCRtpS
-erver/deploy.sh)...executed.
+= ,firstline=1,lastline=11" -o PLANTILLA_TFG.out.pyg ../../src/VideoServers//de
+ploy.sh)...executed.
 
  (./PLANTILLA_TFG.out.pyg)
 runsystem(rm PLANTILLA_TFG.out.pyg)...executed.
@@ -3752,15 +3752,15 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 113.
 runsystem(pygmentize -l cpp -f latex -F tokenmerge             -P "verboptions=
- ,firstline=1,lastline=8" -o PLANTILLA_TFG.out.pyg ../03-ServoServers/ArduinoCo
-de/servo_serial_write/servo_serial_write.ino)...executed.
+ ,firstline=1,lastline=8" -o PLANTILLA_TFG.out.pyg ../../src/ArduinoCode//servo
+_serial_write/servo_serial_write.ino)...executed.
 
  (./PLANTILLA_TFG.out.pyg)
 runsystem(rm PLANTILLA_TFG.out.pyg)...executed.
 
 runsystem(pygmentize -l cpp -f latex -F tokenmerge             -P "verboptions=
- ,firstline=9,lastline=27" -o PLANTILLA_TFG.out.pyg ../03-ServoServers/ArduinoC
-ode/servo_serial_write/servo_serial_write.ino)...executed.
+ ,firstline=9,lastline=27" -o PLANTILLA_TFG.out.pyg ../../src/ArduinoCode//serv
+o_serial_write/servo_serial_write.ino)...executed.
 
  (./PLANTILLA_TFG.out.pyg)
 runsystem(rm PLANTILLA_TFG.out.pyg)...executed.
@@ -3803,15 +3803,15 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 127.
 [35]
 runsystem(pygmentize -l cpp -f latex -F tokenmerge             -P "verboptions=
- ,firstline=27,lastline=34" -o PLANTILLA_TFG.out.pyg ../03-ServoServers/Arduino
-Code/servo_serial_write/servo_serial_write.ino)...executed.
+ ,firstline=27,lastline=34" -o PLANTILLA_TFG.out.pyg ../../src/ArduinoCode//ser
+vo_serial_write/servo_serial_write.ino)...executed.
 
  (./PLANTILLA_TFG.out.pyg)
 runsystem(rm PLANTILLA_TFG.out.pyg)...executed.
 
 runsystem(pygmentize -l cpp -f latex -F tokenmerge             -P "verboptions=
- ,firstline=36,lastline=43" -o PLANTILLA_TFG.out.pyg ../03-ServoServers/Arduino
-Code/servo_serial_write/servo_serial_write.ino)...executed.
+ ,firstline=36,lastline=43" -o PLANTILLA_TFG.out.pyg ../../src/ArduinoCode//ser
+vo_serial_write/servo_serial_write.ino)...executed.
 
  (./PLANTILLA_TFG.out.pyg)
 runsystem(rm PLANTILLA_TFG.out.pyg)...executed.
@@ -3829,8 +3829,8 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 141.
 runsystem(pygmentize -l python -f latex -F tokenmerge             -P "verboptio
-ns= ,firstline=28,lastline=34" -o PLANTILLA_TFG.out.pyg ../03-ServoServers/Serv
-oControlPython/control_servo.py)...executed.
+ns= ,firstline=28,lastline=34" -o PLANTILLA_TFG.out.pyg ../../src/ControlServer
+//control_servo.py)...executed.
 
 
 (./PLANTILLA_TFG.out.pyg)
@@ -3874,8 +3874,8 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 148.
 [36]
 runsystem(pygmentize -l python -f latex -F tokenmerge             -P "verboptio
-ns= ,firstline=62,lastline=83" -o PLANTILLA_TFG.out.pyg ../03-ServoServers/Serv
-oControlPython/control_servo.py)...executed.
+ns= ,firstline=62,lastline=83" -o PLANTILLA_TFG.out.pyg ../../src/ControlServer
+//control_servo.py)...executed.
 
  (./PLANTILLA_TFG.out.pyg)
 runsystem(rm PLANTILLA_TFG.out.pyg)...executed.
@@ -3893,8 +3893,8 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 155.
 runsystem(pygmentize -l python -f latex -F tokenmerge             -P "verboptio
-ns= ,firstline=7,lastline=16" -o PLANTILLA_TFG.out.pyg ../03-ServoServers/Servo
-ControlPython/udp_server.py)...executed.
+ns= ,firstline=7,lastline=16" -o PLANTILLA_TFG.out.pyg ../../src/ControlServer/
+/udp_server.py)...executed.
 
  (./PLANTILLA_TFG.out.pyg)
 runsystem(rm PLANTILLA_TFG.out.pyg)...executed.
@@ -3937,8 +3937,8 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 162.
 [37]
 runsystem(pygmentize -l python -f latex -F tokenmerge             -P "verboptio
-ns= ,firstline=17,lastline=28" -o PLANTILLA_TFG.out.pyg ../03-ServoServers/Serv
-oControlPython/udp_server.py)...executed.
+ns= ,firstline=17,lastline=28" -o PLANTILLA_TFG.out.pyg ../../src/ControlServer
+//udp_server.py)...executed.
 
  (./PLANTILLA_TFG.out.pyg)
 runsystem(rm PLANTILLA_TFG.out.pyg)...executed.
@@ -4092,24 +4092,24 @@ Package babel Info: Redefining spanish shorthand "?
 [39
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 174.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 174.
  (./PLANTILLA_TFG.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 165.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 174.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 174.
 Package rerunfilecheck Info: File `PLANTILLA_TFG.out' has not changed.
 (rerunfilecheck)             Checksum: 1831929348D878E416CB967AC375D5BF;5033.
  ) 
 Here is how much of TeX's memory you used:
- 24247 strings out of 493304
- 393913 string characters out of 6139871
- 549594 words of memory out of 5000000
- 26841 multiletter control sequences out of 15000+600000
+ 24251 strings out of 493304
+ 393975 string characters out of 6139871
+ 549695 words of memory out of 5000000
+ 26845 multiletter control sequences out of 15000+600000
  25239 words of font info for 63 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  63i,12n,92p,3224b,720s stack positions out of 5000i,500n,10000p,200000b,80000s

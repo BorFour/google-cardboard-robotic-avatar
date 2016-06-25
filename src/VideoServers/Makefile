@@ -14,4 +14,4 @@ redeploy:
 status:
 	pgrep vlc
 	sudo fuser 8554/udp
-	sudo fuser 8554/udp
+	sudo fuser 8556/udp

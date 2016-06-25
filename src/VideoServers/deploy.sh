@@ -5,8 +5,8 @@ RTP=("sdp=rtsp://:8554/" "sdp=rtsp://:8556/")
 CODEC_PARAMS="preset=ultrafast,tune=zerolatency,intra-refresh,lookahead=10,keyint=15"
 PARAMS="vcodec=h264,venc=x264{$CODEC_PARAMS}"
 OUTPUT="width=640,height=720,fps=5"
-TRANSCODE_0="#transcode{$PARAMS,$OUTPUT}:rtp{$RTP[0]}"
-TRANSCODE_1="#transcode{$PARAMS,$OUTPUT}:rtp{$RTP[1]}"
+TRANSCODE_0="#transcode{$PARAMS,$OUTPUT}:rtp{${RTP[0]}}"
+TRANSCODE_1="#transcode{$PARAMS,$OUTPUT}:rtp{${RTP[1]}}"
 cvlc -vvv ${CAMERAS[0]} --sout $TRANSCODE_0 >/dev/null 2>/dev/null &
 cvlc -vvv ${CAMERAS[1]} --sout $TRANSCODE_1 >/dev/null 2>/dev/null &
 
