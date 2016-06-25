@@ -4,37 +4,92 @@
 \lsection{Calidad de servicio}
 
 Para medir la \textit{QoS}, se han hecho pruebas combinando distintos clientes, distintos servidores y distintos interfaces de red.
-\todo[inline]{Pruebas: calidad de servicio}
+\todo[inline]{Pruebas: \currentname}
 \subsection{Servidores}
-A continuación, se comentan las distintas implementaciones de los servidores multimedia que se han contemplado.
-\subsubsection{FFMpeg}
-\subsubsection{FFServer}
-\subsubsection{GStreamer}
-\subsubsection{CVLC}
+A continuación, se comentan las distintas implementaciones de los servidores multimedia que se han contemplado. Las siguientes herramientas listadas se ejecutan a través de la terminal de Linux y los parámetros de los streams se especifican como argumentos de los correspondientes ejecutables:
+\begin{itemize}
+	\item \textbf{FFMpeg}
+	\item \textbf{FFServer}
+	\item \textbf{GStreamer}
+	\item \textbf{CVLC}
+\end{itemize}
+
+
 \subsection{Clientes}
-\subsubsection{FPlay}
-\subsubsection{Programa con JavaCV}
-\subsubsection{App RTSP Player}
-\subsubsection{VLC}
+
+\begin{itemize}
+	\item \textbf{FPlay}: se ejecuta a través de la terminal y, a parte de mostrar el \textit{stream}, muestra por la terminal datos acerca de éste.
+	\item \textbf{VLC}: este famoso reproductor de multimedia también puede usarse para abrir contenido a través de una URL. 
+	\item \textbf{RTSP Player}: Es una \textit{app} para Android que se conecta a un vídeo RTSP a través de su enlace.
+	\item \textbf{Programa con JavaCV}: JavaCV utiliza wrappers para diversas librerías de visión por computador. Este programa de elaboración propia conecta con los servidores multimedia a través de la URL y los muestra en dos ventanas, una al lado de la otra. La idea era poder portar este código a la aplicación de Android, utilizando el archivo .jar para ARM en vez del archivo para amd64. Al probarlo, surgía un error inidentificable al abrir los \textit{streams} y, tras bastante esfuerzo intentando solventarlo sin resultado, hubo que buscar otra solución.
+
+\end{itemize}
+
 \subsection{Interfaces}
-\subsubsection{localhost}
-\subsubsection{Multicast Wi-Fi}
-\subsubsection{Unicast RJ-45}
-\subsection{Pruebas significativas (combinaciones de los 3 anteriores)}
+
+\begin{itemize}
+	\item \textbf{\textit{localhost}}: Pseudónimo de la dirección IP 127.0.0.1, se usa para referirse a la propia máquina. Para pruebas en las que el cliente y el servidor se encuentran ejecutándose en la misma máquina. La pérdida de paquetes es ínfima en este escenario.
+	\item \textbf{Multicast Wi-Fi}: La única forma de desplegar el servidor RTSP utilizando un interfaz de red \textit{wireless}
+	y que pudiese ser accedido desde otras máquinas era utilizando una dirección IP multicast.
+	\item \textbf{Unicast RJ-45}: Finalmente, el cableado a través de un cable RJ-45 al router era la mejor opción (como era de esperar). Ofrece un MTU mayor, mayor ancho de banda y menos pérdida de paquetes. Además, permite desplegar el servidor en la dirección IP correspondiente a la interfaz de red (\textit{eth0}), lo cual hace que los servidores multimedia sean unicast, lo que quiere decir que sólo se permite una conexión a la vez.
+\end{itemize}
+
+\subsection{Pruebas significativas}
 
 
 \lsection{Cámaras}
 \label{sect:prueba_camaras}
-\todo[inline]{Pruebas: cámaras}
+\todo[inline]{Pruebas: \currentname}
+
+\subsection{Cámaras con objetivo ojo de pez}
+
+También conocidas como \textit{fisheye lens}, las lentes de estas cámaras proporcionan un ángulo de visión superior al resto de tipos de lentes a cambio de una distorsión visual severa. Una vez montado todo el sistema, se ha probado a ejecutar la aplicación con las gafas de realidad virtual y conectándose a los dos servidores de vídeos alimentados por fotogramas de estas cámaras. El cerebro parece no estar preparado para sentir la profundidad a partir de dos imágenes de este tipo y, a pesar de las prestaciones que podrían haber ofrecido, las cámaras con objetivo de ojo de pez no han resultado idóneas para este proyecto.
+
+
+\todo[inline]{\currentname: cambiar por imagen con fisheye}
+
+\begin{figure}[H]
+	\centerline{
+		\mbox{\includegraphics[width=4.00in]{images/captura_cliente_1.jpg}}
+	}
+	\caption{\textbf{Aplicación funcionando con cámaras \textit{fish-eye} en los servidores de vídeo.} Esta imagen es una captura de pantalla del dispositivo Android desde el que se han hecho las pruebas.}
+	\label{fig:captura_cliente_fisheye}
+\end{figure}
+
+\subsection{Cámaras con lente normal}
+
+Al final, unas webcam normales adquiridas en una tienda común de electrónica han resultado las más adecuadas. Ya que no poseen esta curvatura tan pronunciada en las imágenes, es posible captar la profundidad ya que las equivalencias entre ambas imágenes son lineales. 
+
+\begin{figure}[H]
+	\centerline{
+		\mbox{\includegraphics[width=4.00in]{images/captura_cliente_1.jpg}}
+	}
+	\caption{\textbf{Aplicación funcionando.} Esta imagen es una captura de pantalla del dispositivo Android desde el que se han hecho las pruebas.}
+	\label{fig:captura_cliente_1}
+\end{figure}
 
 \lsection{Servomotor}
 \label{sect:prueba_servo}
-\todo[inline]{Pruebas: servomotor}
+%\todo[inline]{Pruebas: \currentname}
+
+Los servomotores son capaces de girar en sentido horario o antihorario con mayor o menor velocidad angular. Esto se indica mediante una señal analógica de entrada, la cual producimos en este caso mediante los PWM de la placa Arduino. En materia de código, este valor se indica con un byte sin signo, es decir, un número natural en el rango [0, 255], como se explica en \cite{online:pwm}. Así pues, después de calibrar el motor con un destornillador se observando el comportamiento del servomotor para distintos valores analógicos. En el cuadro \ref{tabla:valores_servomotor} se encuentran estos resultados, que más tarde se usaron para la implementación de la clase manda valores al Arduino a través de un objeto \textit{Serial}.
+
+\begin{table}[H]
+	\centering
+	\caption{}
+	\label{tabla:valores_servomotor}
+	\begin{tabular}{@{}ccc@{}}
+		\toprule
+		\multicolumn{1}{l}{Incremento del ángulo ($^\circ$)} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Valores para desplazar el \\ servomotor a la izquierda\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Valores para desplazar el \\ servomotor a la derecha\end{tabular}} \\ \midrule
+		0                                             & 90                                                                                                                 & 90                                                                                                               \\
+		45                                            & 79                                                                                                                 & 99                                                                                                               \\
+		90                                            & 73                                                                                                                 & 104                                                                                                              \\
+		135                                           & 73, 79                                                                                                             & 104, 99                                                                                                          \\
+		180                                           & 60                                                                                                                 & 117                                                                                                             
+	\end{tabular}
+\end{table}
+
+\lsection{Experimentos del sistema completo y resultados}
+\todo[inline]{Pruebas: \currentname}
 
 
-\lsection{Experimentos del sistema completo}
-\todo[inline]{Pruebas: Experimentos del sistema completo}
-
-\lsection{Resultados}
-\todo[inline]{Pruebas: Resultados}
-\label{sect:pruebas_resultados}

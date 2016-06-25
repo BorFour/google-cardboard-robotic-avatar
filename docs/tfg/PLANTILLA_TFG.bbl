@@ -5,6 +5,11 @@ Michael Margolis.
 \newblock Varspeedservo.
 \newblock {\em https://github.com/netlabtoolkit/VarSpeedServo}, 2009.
 
+\bibitem{online:pwm}
+Timothy Hirzel.
+\newblock Documentación de los pines pwm de la placa arduino.
+\newblock {\em https://www.arduino.cc/en/Tutorial/PWM}, 2016.
+
 \bibitem{online:daydream}
 Google.
 \newblock Google vr: Daydream.
