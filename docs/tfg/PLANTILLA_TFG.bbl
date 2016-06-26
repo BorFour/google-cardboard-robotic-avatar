@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{book:android_studio_programming}
+Kevin Grant and Chris Haseman.
+\newblock Beginning android programming.
+\newblock {\em ISBN-13: 978-0-321-95656-9, ISBN-10: 0-321-95656-7}, 2014.
+
 \bibitem{online:varspeedservo}
 Michael Margolis.
 \newblock Varspeedservo.

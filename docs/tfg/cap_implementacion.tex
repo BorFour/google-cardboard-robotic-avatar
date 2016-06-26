@@ -4,12 +4,16 @@
 
 \lsection{Cliente}
 \subsection{Fundamentos de programación para Android con Android Studio}
-\todo[inline]{Implementación: \currentname}
-\textbf{Referencias a libro de Android de la biblioteca}
+%\todo[inline]{Implementación: \currentname}
+
+A continuación se explican conceptos añadidos a la programación en \textit{Java} y básicos para entender la implementación en aplicaciones para plataformas Android, desarrollados con más detalle en \cite{book:android_studio_programming}.
+
 \begin{itemize}
-\item Activity
-\item Layout
-\item Interfaces handler (?)
+\item \textbf{Recursos y \textit{R}}: \textit{R} es una clase estática existente a través de generación automática de código que asigna un número entero a los distintos recursos del proyecto (archivos de texto, imágenes, audio...). Estos recursos pueden ser referenciados desde el código \textit{Java} mediante este identificador, que se encuentra en la clase \textit{R} como un tipo de dato \textit{public static int}.
+\item \textbf{\textit{Activity}}: la clase Activity se corresponde con una vista con una interfaz gráfica, un modelo con atributos de esta clase y controladores, correspondientes a los métodos. Para crear una nueva vista de la aplicación, se suele crear una clase que herede de ésta (\textit{extends}).
+\item \textbf{Interfaces \textit{handler}}: en el sistema operativo Android y en la propia aplicación ocurren distintos tipos de eventos que pueden ser más o menos interesantes dependiendo de los requisitos del programa. Para poder escuchar esos eventos y hacer algo cuando ocurren, se suelen implementar interfaces Java dentro de nuestra actividad. Así, cuando el SO notifique a la actividad de una de estas señales, se ejecutaré un método \textit{handler}, cuyo nombre se indica en la interfaz implementada asociada a este suceso.
+\item \textbf{\textit{Layout}}: el \textit{layout} es la distribución de los distintos elementos gráficos en la pantalla. Ésta puede indicarse de dos formas: programáticamente en alguna función de la actividad a través de diversas clases, forma que no suele ser habitual ni conveniente, o bien a través de un fichero XML. El SDK de Android ofrece la funcionalidad de cargar la distribución a partir del identificador de recurso de este archivo, creand internamente las clases que gestionan la distribución en la pantalla y asociándolas con la actividad.
+
 \end{itemize}
 \subsection{Aplicación}
 
@@ -59,7 +63,7 @@ Como en la actividad del formulario, al crearse se guarda la referencia al \text
 \todo[inline]{Implementación: \currentname}
 \subsection{Configuración del servidor}
 
-Para los servidores de vídeo, finalmente se ha utilizado el comando \textbf{cvlc}, herramienta de VLC para la terminal. Ésta ofrece una inmensidad de servicios, entre los cuales no interesa la posibilidad de desplegar servidores multimedia. La configuración de estos se indica junto con este comando en una cadena de caracteres que vendrá a definir el pipeline que se ejecutará para dicho servidor. Un pipeline consta, en resumen, de estos elementos:
+Para los servidores de vídeo, finalmente se ha utilizado el comando \textbf{cvlc}, herramienta de VLC para la terminal. Ésta ofrece una inmensidad de servicios, entre los cuales no interesa la posibilidad de desplegar servidores multimedia. La configuración de estos se indica junto con este comando en una cadena de caracteres que vendrá a definir el \textit{pipeline} que se ejecutará para dicho servidor. Un pipeline consta, en resumen, de estos elementos:
 
 \begin{enumerate}
 \item Entrada (\textit{Input Source})
@@ -69,16 +73,29 @@ Para los servidores de vídeo, finalmente se ha utilizado el comando \textbf{cvlc
 
 Como entrada, se especifica la videocámara por su ruta dentro del sistema de ficheros y se abre en este caso con V4L2 que es una API de captura de vídeo y está integrada en el kernel de linux.
 
-Con esta fuente, se forma el vídeo en sí. El códec de vídeo elegido ha sido el \textbf{H264}. Este formato tiene decenas y decenas de variables y parámetros. Ya que el objetivo de este proyecto no era el de realizar una tarea de optimización tan intensa, se ha recurrrido a lo que se llaman \textit{presets}, que dan valor al conjunto de parámetros del códec para ofrecer una determinada calidad y rendimiento. Se ha configurado de forma que sea lo más rápido posible y que tenga una menor latencia. Finalmente, se indica la resolución de salida para que se corresponda justo lo que ocupará en la aplicación de móvil (la mitad de la resolución de la pantalla táctil) y también se indican los FPS).
+Con esta fuente, se forma el vídeo en sí. El códec de vídeo elegido ha sido el \textbf{H264}. Este formato tiene decenas y decenas de variables y parámetros. Ya que el objetivo de este proyecto no era el de realizar una tarea de optimización tan intensa, se ha recurrrido a lo que se llaman \textit{presets}, que dan valor al conjunto de parámetros del códec para ofrecer una determinada calidad y rendimiento. Se ha configurado de forma que sea lo más rápido posible y que tenga una menor latencia. Finalmente, se indica la resolución de salida para que se corresponda justo lo que ocupará en la aplicación de móvil (la mitad de la resolución de la pantalla táctil) y también se indican los FPS.
 
-Finalmente, se indica que la salida del pipeline será un servidor RSTP, en el cual se enviarán los datos a través de RTP y cuyos datos de sesión se guardarán en un archivo SDP, que se encontará en la dirección física de la propia máquina en la que se ejecute el script y en el puerto indicado.
+Finalmente, se indica que la salida del pipeline será un servidor RTSP, en el cual se enviarán los datos a través de RTP y cuyos metadatos de sesión se guardarán en un archivo SDP, que se encontará en la dirección física de la propia máquina en la que se ejecute el script y en el puerto indicado.
 
-El código completo del script se encuentra en la figura ~\ref{fig:despliegue_servidores_video}
-1
+El código completo del script se encuentra en la figura \ref{fig:despliegue_servidores_video}
+
 
 \lsection{Servidor de control}
 
-\subsection{Servomotor y arduino}
+%\subsection{Servomotor y arduino}
+\subsection{Circuito y programación de la placa Arduino}
+
+El circuito para controlar el servomotor con nuestra placa es trivial, como se muestra en la figura \ref{fig:circuito_arduino}. 
+
+El lenguaje que utiliza el IDE de Arduino es un dialecto de C++. Un programa consta obligatoriamente de dos partes y de tantas variables y funciones auxiliares como puedan caber en la memoria de la placa. La primera parte, la función \textit{setup()}, se ejecuta cuando ésta se conecta. La segunda, la función \textit{loop()}, se invoca inmediatamente después y se ejecuta dentro de un bucle infinito.
+
+\begin{itemize}
+	
+	\item \textbf{\textit{myRead()}}: función auxiliar. Lee caracter a caracter del objeto Serial. Cuando lee el caracter \textit{$'\backslash n'$}, convierte la cadena a un número entero y lo devuelve.
+	\item \textbf{\textit{setup()}}: abrimos el puerto serial para recibir datos e inicializamos el objeto que se encarga de controlar el servomotor, asociándolo al GPIO ~3 (PWM)
+	\item \textbf{\textit{loop()}}: utiliza la función \textit{myRead()} y pasa el valor leído al método VarSpeedServo.write, que escribe este valor en el PWM asociado al servomotor. Después, espera 500 ms y vuelve a empezar.
+	
+\end{itemize}
 
 \begin{figure}[H]
 	\centerline{
@@ -88,10 +105,8 @@ El código completo del script se encuentra en la figura ~\ref{fig:despliegue_ser
 	\label{fig:circuito_arduino}
 \end{figure}
 
-
 \subsection{Cliente/servidor UDP}
 \todo[inline]{Implementación: \currentname}
-\subsection{Programación del arduino}
 
 Se ha utilizado la librería \cite{online:varspeedservo} para el control del servomotor.
 
@@ -103,7 +118,7 @@ Para la implementación de este servidor, se ha elegido Python 2.7 como lenguaje 
 \item El módulo \textbf{serial} permite al programador acceder a cierto puerto serial para efectuar operaciones de lectura y escritura abstrayéndose del protocolo USB a bajo nivel.
 \end{itemize}
 
-\subsubsection{ServoController}
+\subsubsection{ServoControl}
 El constructor de esta clase intenta abrir el puerto serial donde ha de encontrarse conectado el Arduino y lanza una excepción cuando la apertura falla. Después, simplemente se invoca al método \textit{moveAngle()} que recibe un ángulo como parámetro. Una instancia de esta clase siempre guarda internamente el último ángulo recibido a través de este método (inicializándolo en 0 grados) y el ángulo que debe desplazarse se calcula mediante la diferencia con esta referencia. Es decir, el incremento del ángulo es relativo al ángulo inmediatamente anterior. Ya que el tipo de motor no es preciso a la hora de desplazar un ángulo en concreto, se ha tomado la siguiente decisión de implementación: se ha creado un diccionario en el cual las claves son un ángulo en concreto, múltiplo de 45 y de -180 a 180. Los valores, son el valor analógico que hay que pasarle al arduino para que gire, aproximadamente, esa cantidad de grados. Por tanto, el valor que se enviará a través del puerto serial será el valor para la clave que más se aproxime a la diferencia entre el nuevo ángulo y el ángulo anterior (es decir, el incremento).
 
 \subsubsection{UDP server}	

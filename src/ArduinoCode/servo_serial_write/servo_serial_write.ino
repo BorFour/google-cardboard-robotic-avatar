@@ -3,6 +3,7 @@
 
 VarSpeedServo myservo;  // create servo object to control a servo
 
+const int INTERVAL = 500;
 const int MIN_VALUE = 50;
 const int MAX_VALUE = 150;
 const int STILL_VALUE = 90;

@@ -20,33 +20,32 @@
 \contentsline {subsection}{\numberline {3.1.5}Tamaño y rendimiento}{8}{subsection.3.1.5}
 \contentsline {section}{\numberline {3.2}Arquitectura}{9}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Vista estática}{9}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Vista funcional}{10}{subsection.3.2.2}
-\contentsline {subsubsection}{Servidor de vídeo}{10}{section*.30}
-\contentsline {subsubsection}{Servidor de control}{10}{section*.32}
-\contentsline {subsubsection}{Cliente móvil}{10}{section*.34}
-\contentsline {subsection}{\numberline {3.2.3}Vista dinámica}{11}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Diseño}{11}{section.3.3}
+\contentsline {subsection}{\numberline {3.2.2}Vista funcional}{9}{subsection.3.2.2}
+\contentsline {subsubsection}{Servidor de vídeo}{9}{section*.30}
+\contentsline {subsubsection}{Servidor de control}{9}{section*.31}
+\contentsline {subsubsection}{Cliente móvil}{10}{section*.32}
+\contentsline {subsection}{\numberline {3.2.3}Vista dinámica}{10}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Diseño}{10}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Servidor de vídeo}{11}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Servidor de control}{11}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Cliente móvil}{11}{subsection.3.3.3}
 \contentsline {chapter}{\numberline {4}Implementación}{15}{chapter.4}
 \contentsline {section}{\numberline {4.1}Cliente}{15}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Fundamentos de programación para Android con Android Studio}{15}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Aplicación}{15}{subsection.4.1.2}
-\contentsline {subsubsection}{Gestor de direcciones}{15}{section*.44}
-\contentsline {subsubsection}{Transmisor de posición}{15}{section*.45}
-\contentsline {subsubsection}{Formulario}{16}{section*.46}
-\contentsline {subsubsection}{Actividad principal}{16}{section*.48}
+\contentsline {subsection}{\numberline {4.1.2}Aplicación}{16}{subsection.4.1.2}
+\contentsline {subsubsection}{Gestor de direcciones}{16}{section*.38}
+\contentsline {subsubsection}{Transmisor de posición}{16}{section*.39}
+\contentsline {subsubsection}{Formulario}{16}{section*.40}
+\contentsline {subsubsection}{Actividad principal}{16}{section*.42}
 \contentsline {section}{\numberline {4.2}Servidores de vídeo}{17}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Streaming multimedia, códecs y formatos de vídeo}{17}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Configuración del servidor}{17}{subsection.4.2.2}
 \contentsline {section}{\numberline {4.3}Servidor de control}{18}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Servomotor y arduino}{18}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Cliente/servidor UDP}{18}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Programación del arduino}{18}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Programación del servidor}{18}{subsection.4.3.4}
-\contentsline {subsubsection}{ServoController}{18}{section*.52}
-\contentsline {subsubsection}{UDP server}{19}{section*.53}
+\contentsline {subsection}{\numberline {4.3.1}Circuito y programación de la placa Arduino}{18}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Cliente/servidor UDP}{19}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Programación del servidor}{19}{subsection.4.3.3}
+\contentsline {subsubsection}{ServoControl}{19}{section*.46}
+\contentsline {subsubsection}{UDP server}{20}{section*.47}
 \contentsline {chapter}{\numberline {5}Pruebas y resultados}{21}{chapter.5}
 \contentsline {section}{\numberline {5.1}Calidad de servicio}{21}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Servidores}{21}{subsection.5.1.1}
@@ -61,8 +60,8 @@
 \contentsline {chapter}{\numberline {6}Conclusiones y trabajo futuro}{25}{chapter.6}
 \contentsline {section}{\numberline {6.1}Conclusiones}{25}{section.6.1}
 \contentsline {section}{\numberline {6.2}Trabajo futuro}{25}{section.6.2}
-\contentsline {chapter}{Glosario de acrónimos}{27}{chapter*.63}
-\contentsline {chapter}{Bibliografía}{28}{chapter*.63}
+\contentsline {chapter}{Glosario de acrónimos}{27}{chapter*.56}
+\contentsline {chapter}{Bibliografía}{28}{chapter*.56}
 \contentsline {chapter}{\numberline {A}Fragmentos de código}{31}{appendix.Alph1}
 \contentsline {section}{\numberline {A.1}Cliente}{31}{section.Alph1.1}
 \contentsline {subsection}{\numberline {A.1.1}AddressManager.java}{31}{subsection.Alph1.1.1}

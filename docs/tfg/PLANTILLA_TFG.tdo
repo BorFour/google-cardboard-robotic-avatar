@@ -9,19 +9,12 @@
 \contentsline {todo}{Estado del arte: Conceptos previos}{6}{section*.24}
 \contentsline {todo}{Referencia a gafas de VR: Descripción del producto}{7}{section*.25}
 \contentsline {todo}{Análisis: Viabilidad}{7}{section*.26}
-\contentsline {todo}{Vista funcional: Servidor de vídeo}{10}{section*.31}
-\contentsline {todo}{Vista funcional: Servidor de control}{10}{section*.33}
-\contentsline {todo}{Vista funcional: Cliente móvil}{10}{section*.35}
-\contentsline {todo}{Vista dinámica}{11}{section*.36}
-\contentsline {todo}{Diseño: Servidor de vídeo}{11}{section*.37}
-\contentsline {todo}{Diseño: Servidor de control}{11}{section*.38}
-\contentsline {todo}{Diseño: Cliente móvil}{11}{section*.40}
-\contentsline {todo}{Implementación: Fundamentos de programación para Android con Android Studio}{15}{section*.43}
-\contentsline {todo}{Implementación: Streaming multimedia, códecs y formatos de vídeo}{17}{section*.49}
-\contentsline {todo}{Implementación: Cliente/servidor UDP}{18}{section*.51}
-\contentsline {todo}{Pruebas: Calidad de servicio}{21}{section*.54}
-\contentsline {todo}{Pruebas: Cámaras}{22}{section*.55}
-\contentsline {todo}{Cámaras con objetivo ojo de pez: cambiar por imagen con fisheye}{22}{section*.56}
-\contentsline {todo}{Pruebas: Experimentos del sistema completo y resultados}{24}{section*.60}
-\contentsline {todo}{Conclusiones}{25}{section*.61}
-\contentsline {todo}{Trabajo futuro}{25}{section*.62}
+\contentsline {todo}{Vista dinámica}{10}{section*.33}
+\contentsline {todo}{Diseño: Cliente móvil}{11}{section*.35}
+\contentsline {todo}{Implementación: Streaming multimedia, códecs y formatos de vídeo}{17}{section*.43}
+\contentsline {todo}{Implementación: Cliente/servidor UDP}{19}{section*.45}
+\contentsline {todo}{Pruebas: Calidad de servicio}{21}{section*.48}
+\contentsline {todo}{Cámaras con objetivo ojo de pez: cambiar por imagen con fisheye}{22}{section*.49}
+\contentsline {todo}{Pruebas: Experimentos del sistema completo y resultados}{24}{section*.53}
+\contentsline {todo}{Conclusiones}{25}{section*.54}
+\contentsline {todo}{Trabajo futuro}{25}{section*.55}

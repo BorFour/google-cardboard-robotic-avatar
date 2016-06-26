@@ -68,7 +68,7 @@ Esta arquitectura del software está orientada a permitir exclusivamente una cone
 
 El cliente es el componente central de este sistema heterogéneo. Éste está compuesto a su vez de otros tres componentes que se ejecutan como hilos independientes en la app. Uno de ellos envía periódicamente la orientación del dispositivo al servidor de control en datagramas a través del protocolo de transporte UDP. Los otros dos reciben un stream de vídeo cada uno, procedentes de los servidores de vídeo a través del protocolo de aplicación RTSP. El servidor de control está conectado a su vez con el Arduino por medio de USB, al igual que las cámaras están conectadas a la máquina en la que se ejecutan los servidores de vídeos también por USB. Estas relaciones entre los componentes se pueden visualizar en la figura~\ref{fig:diagrama_componentes}
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centerline{
 		\mbox{\includegraphics[width=4.00in]{images/diagrama_componentes.png}}
 	}
@@ -80,25 +80,45 @@ El cliente es el componente central de este sistema heterogéneo. Éste está compu
 
 \subsection{Vista funcional} % La visión funcional: describe qué hace cada componente.
 
-Aquí iría una explicación detallada de la funcionalidad de cada componente por separado
+Descripción por separado de los componentes del sistema.
 
 \subsubsection{Servidor de vídeo}
-\todo[inline]{Vista funcional: \currentname}
+%\todo[inline]{Vista funcional: \currentname}
+
+La funcionalidad de este componente dentro del sistema es la de proveer al cliente de dos flujos continuos de vídeo. Estos deben poder ser referenciados y accedidos a través de una dirección IP y de un puerto, bien dentro de la red local o bien a través de Internet. 
+
 \subsubsection{Servidor de control}
-\todo[inline]{Vista funcional: \currentname}
+%\todo[inline]{Vista funcional: \currentname}
+
+Este servidor también debe poder referenciarse del mismo modo que el anterior. Recibirá constantemente la posición desde el cliente que transformará en instrucciones para mover la estructura sobre la que se encuentren las cámaras.
+
 \subsubsection{Cliente móvil}
-\todo[inline]{Vista funcional: \currentname}
+%\todo[inline]{Vista funcional: \currentname}
+
+Finalmente, el cliente se integra junto a estas partes anteriores de la siguiente forma: por un lado, ha de poder conectarse a los dos servidores de vídeo a través de sus direcciones para recibir sendos flujos de fotogramas que se mostrarán a través de la pantalla; por otro lado, ha de enviar continuamente sus coordenadas polares al servidor de control para que el Arduino pueda hacer girar el motor consecuentemente.
 
 \subsection{Vista dinámica} % La visión dinámica: describe cómo se comportan los componentes a lo largo del tiempo y como interactúan entre sí.
 \todo[inline]{\currentname}
-Aquí se muestra cómo evoluciona el sistema con el tiempo y dados ciertos eventos.
+Aquí se muestra cómo cambia el sistema con el tiempo y dados ciertos eventos. Toda esta evolución puede observarse prácticamente en el diagrama \ref{fig:diagrama_actividad_app}, correspondiente al cliente.
 
 \lsection{Diseño}
 
 \subsection{Servidor de vídeo}
-\todo[inline]{Diseño: \currentname}
+%\todo[inline]{Diseño: \currentname}
+
+Como se explica en el apartado de implementación, esta parte del sistema no se ha llevado a cabo programando, si no utilizando una herramienta \textit{open source}, por lo que no procede un desarrollo del diseño de los servidores de vídeo.
+
 \subsection{Servidor de control}
-\todo[inline]{Diseño: \currentname}
+%\todo[inline]{Diseño: \currentname}
+
+En el propio servidor de control son dos las clases más importantes, como se detalla en la figura \ref{fig:diagrama_clases_servidor_control}:
+
+\begin{itemize}
+	
+	\item \textbf{\textit{ServoControl}}: posee un objeto \textit{Serial} correspondiente al puerto USB en el que está conectado el Arduino y un valor tipo \textit{float} que representa el último ángulo procesado. El método \textit{moveAngle} mueve desde el ángulo actual hasta el ángulo objetivo.
+	\item \textbf{\textit{UDPServer}}: guarda la dirección y el puerto en la cual será desplegado. El método \textit{bind()} solicita al sistema operativo escuchar los paquetes de la interfaz de red que lleguen a cierta IP y puerto y \textit{recvfrom()} lee datos del socket con un cierto tamaño de buffer (\textit{bufferSize}).
+
+\end{itemize}
 
 \begin{figure}[H]
 	\centerline{
@@ -110,6 +130,9 @@ Aquí se muestra cómo evoluciona el sistema con el tiempo y dados ciertos eventos
 
 \subsection{Cliente móvil}
 \todo[inline]{Diseño: \currentname}
+
+
+
 \begin{figure}[H]
 	\centerline{
 		\mbox{\includegraphics[width=7.00in]{images/diagrama_clases_app.png}}
