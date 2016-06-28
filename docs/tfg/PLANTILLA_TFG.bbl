@@ -1,23 +1,39 @@
 \begin{thebibliography}{1}
 
+\bibitem{link:the_haptic_eye}
+Eduardo Radío. Sarah Dobber.~Borja Fourquet.
+\newblock The haptic eye: sistema de orientación para ciegos.
+\newblock {\em \url{http://thehapticeye.com/}}, 2015.
+
+\bibitem{book:the_virtual_reality}
+Robin Hollands.
+\newblock The virtual reality: Homebrewer's handbook.
+\newblock {\em ISBN 0 471 95871 9}, 1996.
+
+\bibitem{link:pwm}
+Timothy Hirzel.
+\newblock Documentación de los pines pwm de la placa arduino.
+\newblock {\em \url{https://www.arduino.cc/en/Tutorial/PWM}}, 2016.
+
 \bibitem{book:android_studio_programming}
 Kevin Grant and Chris Haseman.
 \newblock Beginning android programming.
 \newblock {\em ISBN-13: 978-0-321-95656-9, ISBN-10: 0-321-95656-7}, 2014.
 
-\bibitem{online:varspeedservo}
+\bibitem{link:varspeedservo}
 Michael Margolis.
 \newblock Varspeedservo.
-\newblock {\em https://github.com/netlabtoolkit/VarSpeedServo}, 2009.
+\newblock {\em \url{https://github.com/netlabtoolkit/VarSpeedServo}}, 2009.
 
-\bibitem{online:pwm}
-Timothy Hirzel.
-\newblock Documentación de los pines pwm de la placa arduino.
-\newblock {\em https://www.arduino.cc/en/Tutorial/PWM}, 2016.
+\bibitem{link:googlevr}
+Google.
+\newblock Google vr sdk for android.
+\newblock {\em
+  \url{https://developers.google.com/vr/android/reference_overview}}, 2016.
 
-\bibitem{online:daydream}
+\bibitem{link:daydream}
 Google.
 \newblock Google vr: Daydream.
-\newblock {\em https://vr.google.com/daydream/}, 2016.
+\newblock {\em \url{https://vr.google.com/daydream/}}, 2016.
 
 \end{thebibliography}

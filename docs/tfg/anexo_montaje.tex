@@ -1,0 +1,110 @@
+\chapter{Montaje y funcionamiento}
+\label{chap:resultado}
+
+\lsection{Robot}
+%\todo[inline]{\currentname}
+
+Se encuentra en el lado del servidor y, funcionalmente, es una cabeza robótica con dos cámaras por ojos y con la capacidad de rotar sobre el eje Z (perpendicular al suelo).
+
+\begin{figure}[H]
+	\centerline{
+		\mbox{\includegraphics[width=4.00in]{images/circuito_fisico.jpg}}
+	}
+	\caption{\textbf{Circuito eletrónico}: las conexiones a la placa arduino se correspondente con el diseño en de la figura \ref{fig:circuito_arduino}. El cable conectado por la derecha de la placa se conecta al PC a través de cualquier puerto USB.}
+	\label{fig:circuito_fisico}
+\end{figure}
+
+\begin{figure}[p]
+	\centerline{
+		\mbox{\includegraphics[width=4.00in]{images/detalle_camaras.jpg}}
+	}
+	\caption{\textbf{Videocámaras}: se encuentran unidas por una estructura de cartón fijada con cinta americana.}
+	\label{fig:detalle_camaras}
+\end{figure}
+
+\begin{figure}[p]
+	\centerline{
+		\mbox{\includegraphics[width=4.00in]{images/camaras_servo.jpg}}
+	}
+	\caption{\textbf{Videocámaras sobre el servomotor}: la estructura con las cámaras se coloca perpendicularmente sobre una estructura circular de un par de pulgadas de diámetro, que a su vez está enganchada al engranaje al cual hace girar el servomotor.}
+	\label{fig:camaras_servo}
+\end{figure}
+
+\newpage
+
+\lsection{Gafas de Realidad Virtual}
+%\todo[inline]{\currentname}
+
+Las gafas de realidad virtual necesarias para este sistema no son más que una estructura física con dos lentes y un espacio donde introducir el móvil, de modo que el usuario pueda ver la pantalla del dispositivo a través de estas lentes.
+
+
+
+\begin{figure}[!h]
+	\centering
+	\centerline{
+		\mbox{\includegraphics[width=4.00in]{images/cardboard_original.jpg}}
+	}
+	\caption{\textbf{Google Cardboard original}: }
+	\label{fig:cardboard_original}
+\end{figure}
+
+
+
+\begin{figure}[p]
+	\centerline{
+		\mbox{\includegraphics[width=4.00in]{images/gafas_vr_cerradas.jpg}}
+	}
+	\caption{\textbf{Gafas de realidad virtual de plástico}: estas gafas son más ergonómicas, ya que tiene gomaespuma en las zonas que hacen contacto con la cara y la cinta elástica se ajusta mejor a la cabeza.}
+	\label{fig:gafas_vr}
+\end{figure}
+
+\begin{figure}[p]
+	\centerline{
+		\mbox{\includegraphics[width=4.00in]{images/gafas_vr_abiertas.jpg}}
+	}
+	\caption{\textbf{Gafas de realidad virtual de plástico}: la parte blanca está compuesta de unas ventosas sobre las que se adhiere el dispositivo móvil para que éste no se mueva con los movimientos de la cabeza del usuario.}
+	\label{fig:detalle_ventosas}
+\end{figure}
+
+\begin{figure}[p]
+	\centerline{
+		\mbox{\includegraphics[width=4.00in]{images/gafas_vr_detalle_lentes.jpg}}
+	}
+	\caption{\textbf{Gafas de realidad virtual de plástico}: las lentes enfocan las imágenes que se muestran en la pantalla del dispositivo móvil, adaptándolas al ojo para que el usuario pueda sentir la profundidad a partir de las dos vistas.}
+	\label{fig:detalle_lentes}
+\end{figure}
+
+
+\begin{figure}[p]
+	\centerline{
+		\mbox{\includegraphics[width=4.00in]{images/movil.jpg}}
+	}
+	\caption{\textbf{\textit{Smartphone} Android}: Utiliza la versión Android 5.1.1 Lollipop como sistema operativo. Resolución full HD (1920x1080p).}
+	\label{fig:movil}
+\end{figure}
+
+\newpage
+
+\lsection{Aplicación Android}
+%\todo[inline]{\currentname}
+ 
+ A continuación se muestran las capturas de pantalla correspondientes a las dos vistas de la aplicación Android del cliente.
+
+
+\begin{figure}[H]
+	\centerline{
+		\mbox{\includegraphics[width=4.00in]{images/captura_formulario.jpg}}
+	}
+	\caption{\textbf{Formulario de la aplicación móvil}. Permite al usuario modificar las direcciones de los tres servidores.}
+	\label{fig:captura_formulario}
+\end{figure}
+
+\begin{figure}[H]
+	\centerline{
+		\mbox{\includegraphics[width=4.00in]{images/captura_cliente_1.jpg}}
+	}
+	\caption{\textbf{Vista principal de la aplicación móvil}. Cada imagen se corresponde a una captura de una de las cámaras alojadas en el servidor. Esta disposición de las fotografías otorga al usuario visión estereoscópica, es decir, la capacidad de sentir profundidad.}
+	\label{fig:captura_cliente_1}
+\end{figure}
+
+\newpage \thispagestyle{empty} % Página vacía 

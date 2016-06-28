@@ -1,83 +1,93 @@
 \select@language {spanish}
 \select@language {spanish}
-\contentsline {chapter}{Índice de Figuras}{\es@scroman {xii}}{chapter*.15}
-\contentsline {chapter}{Índice de Tablas}{\es@scroman {xv}}{chapter*.16}
+\contentsline {chapter}{Índice de Figuras}{\es@scroman {xii}}{chapter*.11}
+\contentsline {chapter}{Índice de Tablas}{\es@scroman {xvi}}{chapter*.12}
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motivación del proyecto}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Objetivos y enfoque}{1}{section.1.2}
 \contentsline {section}{\numberline {1.3}Metodología y plan de trabajo}{2}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Recursos}{2}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Producción}{3}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Despliegue}{3}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.4}Documentación}{3}{subsection.1.3.4}
 \contentsline {chapter}{\numberline {2}Estado del arte}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}Introducción}{5}{section.2.1}
-\contentsline {section}{\numberline {2.2}Historia, nacimiento y evolución.}{5}{section.2.2}
-\contentsline {section}{\numberline {2.3}Estado actual}{5}{section.2.3}
-\contentsline {section}{\numberline {2.4}Conceptos previos}{6}{section.2.4}
-\contentsline {chapter}{\numberline {3}Análisis, arquitectura y diseño del sistema}{7}{chapter.3}
-\contentsline {section}{\numberline {3.1}Análisis}{7}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Descripción del producto}{7}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Viabilidad}{7}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Objetivos y funcionalidad}{7}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Requisitos}{8}{subsection.3.1.4}
-\contentsline {subsection}{\numberline {3.1.5}Tamaño y rendimiento}{8}{subsection.3.1.5}
-\contentsline {section}{\numberline {3.2}Arquitectura}{9}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Vista estática}{9}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Vista funcional}{9}{subsection.3.2.2}
-\contentsline {subsubsection}{Servidor de vídeo}{9}{section*.30}
-\contentsline {subsubsection}{Servidor de control}{9}{section*.31}
-\contentsline {subsubsection}{Cliente móvil}{10}{section*.32}
-\contentsline {subsection}{\numberline {3.2.3}Vista dinámica}{10}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Diseño}{10}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Servidor de vídeo}{11}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Servidor de control}{11}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Cliente móvil}{11}{subsection.3.3.3}
-\contentsline {chapter}{\numberline {4}Implementación}{15}{chapter.4}
-\contentsline {section}{\numberline {4.1}Cliente}{15}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Fundamentos de programación para Android con Android Studio}{15}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Aplicación}{16}{subsection.4.1.2}
-\contentsline {subsubsection}{Gestor de direcciones}{16}{section*.38}
-\contentsline {subsubsection}{Transmisor de posición}{16}{section*.39}
-\contentsline {subsubsection}{Formulario}{16}{section*.40}
-\contentsline {subsubsection}{Actividad principal}{16}{section*.42}
-\contentsline {section}{\numberline {4.2}Servidores de vídeo}{17}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Streaming multimedia, códecs y formatos de vídeo}{17}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Configuración del servidor}{17}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Servidor de control}{18}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Circuito y programación de la placa Arduino}{18}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Cliente/servidor UDP}{19}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Programación del servidor}{19}{subsection.4.3.3}
-\contentsline {subsubsection}{ServoControl}{19}{section*.46}
-\contentsline {subsubsection}{UDP server}{20}{section*.47}
-\contentsline {chapter}{\numberline {5}Pruebas y resultados}{21}{chapter.5}
-\contentsline {section}{\numberline {5.1}Calidad de servicio}{21}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Servidores}{21}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Clientes}{21}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Interfaces}{22}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}Pruebas significativas}{22}{subsection.5.1.4}
-\contentsline {section}{\numberline {5.2}Cámaras}{22}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Cámaras con objetivo ojo de pez}{22}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Cámaras con lente normal}{23}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Servomotor}{23}{section.5.3}
-\contentsline {section}{\numberline {5.4}Experimentos del sistema completo y resultados}{24}{section.5.4}
-\contentsline {chapter}{\numberline {6}Conclusiones y trabajo futuro}{25}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclusiones}{25}{section.6.1}
-\contentsline {section}{\numberline {6.2}Trabajo futuro}{25}{section.6.2}
-\contentsline {chapter}{Glosario de acrónimos}{27}{chapter*.56}
-\contentsline {chapter}{Bibliografía}{28}{chapter*.56}
-\contentsline {chapter}{\numberline {A}Fragmentos de código}{31}{appendix.Alph1}
-\contentsline {section}{\numberline {A.1}Cliente}{31}{section.Alph1.1}
-\contentsline {subsection}{\numberline {A.1.1}AddressManager.java}{31}{subsection.Alph1.1.1}
-\contentsline {subsection}{\numberline {A.1.2}PositionSender.java}{32}{subsection.Alph1.1.2}
-\contentsline {subsection}{\numberline {A.1.3}FormActivity.java}{32}{subsection.Alph1.1.3}
-\contentsline {subsection}{\numberline {A.1.4}MainActivity.java}{34}{subsection.Alph1.1.4}
-\contentsline {section}{\numberline {A.2}Servidores de vídeo}{36}{section.Alph1.2}
-\contentsline {subsection}{\numberline {A.2.1}deploy.sh}{37}{subsection.Alph1.2.1}
-\contentsline {section}{\numberline {A.3}Servidor de control}{37}{section.Alph1.3}
-\contentsline {subsection}{\numberline {A.3.1}servo\_serial\_read.ino}{37}{subsection.Alph1.3.1}
-\contentsline {subsection}{\numberline {A.3.2}control\_servo.py}{39}{subsection.Alph1.3.2}
-\contentsline {subsection}{\numberline {A.3.3}udp\_server.py}{40}{subsection.Alph1.3.3}
-\contentsline {chapter}{\numberline {B}Manual de usuario}{41}{appendix.Alph2}
-\contentsline {section}{\numberline {B.1}Repositorio}{41}{section.Alph2.1}
-\contentsline {section}{\numberline {B.2}Uso}{41}{section.Alph2.2}
-\contentsline {subsection}{\numberline {B.2.1}Despliegue de los servidores de vídeo}{41}{subsection.Alph2.2.1}
-\contentsline {subsection}{\numberline {B.2.2}Código arduino}{41}{subsection.Alph2.2.2}
-\contentsline {subsection}{\numberline {B.2.3}Despliegue de los servidores de vídeo}{41}{subsection.Alph2.2.3}
-\contentsline {subsection}{\numberline {B.2.4}Despliegue de los servidores de vídeo}{41}{subsection.Alph2.2.4}
+\contentsline {section}{\numberline {2.1}Historia, nacimiento y evolución.}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Sensorama}{5}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Headsight}{5}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Realidad virtual en los 90'}{6}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Realidad virtual en el siglo XXI}{6}{subsection.2.1.4}
+\contentsline {section}{\numberline {2.2}Conceptos básicos de la realidad virtual}{7}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Vista estereoscópica}{7}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}\textit {Head tracking}}{7}{subsection.2.2.2}
+\contentsline {chapter}{\numberline {3}Análisis, arquitectura y diseño del sistema}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Análisis}{9}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Descripción del producto}{9}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Objetivos y funcionalidad}{9}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Requisitos}{10}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Tamaño y rendimiento}{10}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}Arquitectura}{10}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Vista estática}{10}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Vista funcional}{11}{subsection.3.2.2}
+\contentsline {subsubsection}{Servidor de vídeo}{11}{section*.23}
+\contentsline {subsubsection}{Servidor de control}{12}{section*.24}
+\contentsline {subsubsection}{Cliente móvil}{12}{section*.25}
+\contentsline {subsection}{\numberline {3.2.3}Vista dinámica}{12}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Diseño}{14}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Servidor de vídeo}{14}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Servidor de control}{14}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Cliente móvil}{14}{subsection.3.3.3}
+\contentsline {chapter}{\numberline {4}Tecnología y pruebas}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Calidad de servicio}{17}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Servidores}{17}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Clientes}{17}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Interfaces}{18}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Pruebas significativas}{18}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}Configuración final}{18}{subsection.4.1.5}
+\contentsline {section}{\numberline {4.2}Cámaras}{20}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Cámaras con objetivo ojo de pez}{20}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Cámaras con lente normal}{20}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Servomotor}{21}{section.4.3}
+\contentsline {chapter}{\numberline {5}Implementación}{23}{chapter.5}
+\contentsline {section}{\numberline {5.1}Cliente}{23}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Fundamentos de programación para Android con Android Studio}{23}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Aplicación}{24}{subsection.5.1.2}
+\contentsline {subsubsection}{Gestor de direcciones}{24}{section*.33}
+\contentsline {subsubsection}{Transmisor de posición}{24}{section*.34}
+\contentsline {subsubsection}{Formulario}{24}{section*.35}
+\contentsline {subsubsection}{Actividad principal}{24}{section*.36}
+\contentsline {section}{\numberline {5.2}Servidores de vídeo}{25}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Configuración del servidor}{25}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.3}Servidor de control}{26}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Circuito y programación de la placa Arduino}{26}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Cliente/servidor UDP}{26}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Programación del servidor}{27}{subsection.5.3.3}
+\contentsline {subsubsection}{ServoControl}{27}{section*.38}
+\contentsline {subsubsection}{UDP server}{27}{section*.39}
+\contentsline {chapter}{\numberline {6}Conclusiones y trabajo futuro}{29}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclusiones}{29}{section.6.1}
+\contentsline {section}{\numberline {6.2}Trabajo futuro}{30}{section.6.2}
+\contentsline {chapter}{Glosario de acrónimos}{31}{chapter*.40}
+\contentsline {chapter}{Bibliografía}{32}{chapter*.40}
+\contentsline {chapter}{\numberline {A}Fragmentos de código}{35}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Cliente}{35}{section.Alph1.1}
+\contentsline {subsection}{\numberline {A.1.1}AddressManager.java}{35}{subsection.Alph1.1.1}
+\contentsline {subsection}{\numberline {A.1.2}PositionSender.java}{36}{subsection.Alph1.1.2}
+\contentsline {subsection}{\numberline {A.1.3}FormActivity.java}{36}{subsection.Alph1.1.3}
+\contentsline {subsection}{\numberline {A.1.4}MainActivity.java}{38}{subsection.Alph1.1.4}
+\contentsline {section}{\numberline {A.2}Servidores de vídeo}{40}{section.Alph1.2}
+\contentsline {subsection}{\numberline {A.2.1}deploy.sh}{40}{subsection.Alph1.2.1}
+\contentsline {section}{\numberline {A.3}Servidor de control}{41}{section.Alph1.3}
+\contentsline {subsection}{\numberline {A.3.1}servo\_serial\_read.ino}{41}{subsection.Alph1.3.1}
+\contentsline {subsection}{\numberline {A.3.2}control\_servo.py}{42}{subsection.Alph1.3.2}
+\contentsline {subsection}{\numberline {A.3.3}udp\_server.py}{43}{subsection.Alph1.3.3}
+\contentsline {chapter}{\numberline {B}Montaje y funcionamiento}{45}{appendix.Alph2}
+\contentsline {section}{\numberline {B.1}Robot}{45}{section.Alph2.1}
+\contentsline {section}{\numberline {B.2}Gafas de Realidad Virtual}{47}{section.Alph2.2}
+\contentsline {section}{\numberline {B.3}Aplicación Android}{50}{section.Alph2.3}
+\contentsline {chapter}{\numberline {C}Manual de usuario}{51}{appendix.Alph3}
+\contentsline {section}{\numberline {C.1}Repositorio}{51}{section.Alph3.1}
+\contentsline {section}{\numberline {C.2}Uso}{51}{section.Alph3.2}
+\contentsline {subsection}{\numberline {C.2.1}Despliegue de los servidores de vídeo}{51}{subsection.Alph3.2.1}
+\contentsline {subsection}{\numberline {C.2.2}Código arduino}{51}{subsection.Alph3.2.2}
+\contentsline {subsection}{\numberline {C.2.3}Despliegue del servidor de control}{51}{subsection.Alph3.2.3}
+\contentsline {subsection}{\numberline {C.2.4}Instalación de la aplicación}{51}{subsection.Alph3.2.4}

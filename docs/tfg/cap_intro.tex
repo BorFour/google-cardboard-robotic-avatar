@@ -3,43 +3,62 @@
 
 \vspace{-0.2cm}
 
+\textit{A little imagination, the right tools, and you can have a virtual world at your fingertips...}
+
 \lsection{Motivación del proyecto}
 
-Mi motivación personal a la hora de embarcarme en este proyecto es la de crear un sistema heterogéneo, investigando así campos como la programación para dispositivos móviles (en este caso, para Android) y las redes multimedia, materias en las que era más bien inexperto antes de comenzar con este trabajo. Por otra parte, mi experiencia en las prácticas de empresa que realicé en el proyecto de emprendimiento The Haptic Eye me animaron a llevar a cabo otro proyecto innovador, en tiempo real y que reúna tecnologías punteras en el estado del arte.
+Mi motivación personal a la hora de embarcarme en este proyecto es la de crear un sistema informático heterogéneo, investigando así campos como la programación para dispositivos móviles (en este caso, para Android) y las redes multimedia.
+
+Por otra parte, mi interés por la realidad virtual, que tanto está creciendo en cuestión de meses, me lleva a integrarla en este proyecto.
+
+Por último, mi experiencia en las prácticas de empresa que realicé en el proyecto de emprendimiento The Haptic Eye \cite{link:the_haptic_eye} me animaron a llevar a cabo otro proyecto innovador, en tiempo real y que reúna tecnologías punteras en el estado del arte.
 
 
 \lsection{Objetivos y enfoque}
 
 % Esto quizás en el abstract mejor
-A modo de síntesis, el objetivo inicial es desarrollar un sistema que proporcionara visión remota al
-usuario mediante de un smartphone conectado, a través de Internet, con un robot con dos cámaras
-como si este último se tratase de un avatar.
+%A modo de síntesis, el objetivo inicial es desarrollar un sistema que proporcionara visión remota al
+%usuario mediante de un smartphone conectado, a través de Internet, con un robot con dos cámaras
+%como si este último se tratase de un avatar.
+%
+%El sistema consta, principalmente, de dos partes:
+%\begin{enumerate}  
+%\item Un Google Cardboard y un teléfono móvil con Android desde el que ejecutar la
+%aplicación. Ésta estará desarrollada utilizando la API de Google Cardboard [2]. En vez de
+%renderizar gráficos en 3D (Figura~\ref{fig:cardboard_3d}), simplemente se reproducirán en tiempo real simultáneamente
+%dos vídeos (uno para cada ojo).
 
-El sistema consta, principalmente, de dos partes:
-\begin{enumerate}  
-\item Un Google Cardboard ~ y un teléfono móvil con Android desde el que ejecutar la
-aplicación. Ésta estará desarrollada utilizando la API de Google Cardboard [2]. En vez de
-renderizar gráficos en 3D (Figura~\ref{fig:cardboard_3d}), simplemente se reproducirán en tiempo real simultáneamente
-dos vídeos (uno para cada ojo).
+
+%\item Un pequeño robot con las siguientes características:
+%\end{enumerate}
+%\begin{itemize}
+%\item Dos videocámaras.
+%\item Una estructura donde alojar estas dos cámaras.
+%\item Un motor que haga girar esta estructura sobre el eje vertical (Figura~\ref{fig:movimiento_cabeza})
+%\item Conectividad con la aplicación a través de Internet.
+%\end{itemize}
+
+
+\begin{itemize}
+	
+	\item Investigar los distintos protocolos e implementaciones de transmisión de vídeo en tiempo real a través de la red  para encontrar el más idóneo para este proyecto.
+	\item Aprender los fundamentos de la programación de aplicaciones para dispositivos móviles, así como familiarizarme con el uso del IDE Android Studio.
+	\item Asimilar las bases de la realidad virtual y, concretamente, de las aplicaciones para las gafas de VR \textit{Google Cardboard} o similares (figura \ref{fig:googlecardboard}).
+	\item Diseñar el sistema del producto, tanto \textit{front-end} como \textit{back-end}, teniendo en cuenta las características distribuidas y en tiempo real del software para crear un prototipo, a modo de prueba de concepto (POC), con las funcionalidades básicas.
+	\item Redactar unas conclusiones del proyecto que sirvan de guía a toda aquella persona que se aventure en un proyecto similar y enumerar las posibles mejoras futuras a partir de las facilidades e impedimentos que se han dado en el desarrollo de este prototipo y teniendo en mente el estado actual de las tecnologías implicadas, así como las perspectivas de que éstas crezcan y mejoren en el futuro inmediato.
+	
+\end{itemize}
+
+
 
 
 \begin{figure}[h]
 	\centerline{
 		\mbox{\includegraphics[width=3.00in]{images/cube2.png}}
 	}
-	\caption{\textbf{Ejemplo de aplicación para Google Cardboard}. Utiliza OpenGL para renderizar los gráficos y los muestra para adaptarse a cada ojo.}
+	\caption{\textbf{Ejemplo de aplicación para Google Cardboard}. Utiliza OpenGL para renderizar los gráficos y los muestra adaptándose a cada ojo.}
 	\label{fig:cardboard_3d}
 \end{figure}
-
-
-\item Un pequeño robot con las siguientes características:
-\end{enumerate}
-\begin{itemize}
-\item Dos videocámaras.
-\item Una estructura donde alojar estas dos cámaras.
-\item Un motor que haga girar esta estructura sobre el eje vertical (Figura~\ref{fig:movimiento_cabeza})
-\item Conectividad con la aplicación a través de Internet.
-\end{itemize}
 
 \begin{figure}[h]
 	\centerline{
@@ -57,13 +76,66 @@ dos vídeos (uno para cada ojo).
 	\label{fig:googlecardboard}
 \end{figure}
 
-La aplicación recibirá como entrada dos streams correspondientes a las cámaras de la
-segunda parte y la posición en la que esta parte se encuentra (aunque en la práctica esto último
-quizás no haga falta). Como salida, enviará la posición en la que se encuentra la cabeza del usuario
-como comandos que el subsistema 2 procesará y convertirá en instrucciones para los motores que
-mueven su estructura.
+%La aplicación recibirá como entrada dos streams correspondientes a las cámaras de la
+%segunda parte y la posición en la que esta parte se encuentra (aunque en la práctica esto último
+%quizás no haga falta). Como salida, enviará la posición en la que se encuentra la cabeza del usuario
+%como comandos que el subsistema 2 procesará y convertirá en instrucciones para los motores que
+%mueven su estructura.
 
 
 \lsection{Metodología y plan de trabajo}
+
+En este apartado se enumeran las herramientas utilizadas para llevar a cabo este proyecto.
+
+\subsection{Recursos}
+
+Estos son los recursos físicos más significativos utilizados en este proyecto.
+
+\begin{itemize}
+	\item PC con procesador \textbf{Intel Core i7} 4790K @ 4.0GHz
+	\item \textbf{Arduino UNO}
+	\item \textbf{Servomotor} a 3.3V
+	\item \textbf{Videocámaras USB} corrientes (\textit{webcams}) x 2
+\end{itemize}
+
+
+\subsection{Producción}
+
+La producción de todo el software se ha llevado a cabo en el PC de sobremesa anteriormente mencionado.
+
+\begin{itemize}
+
+	\item \textbf{Ubuntu 14.04}: popular sistema operativo basado en Debian.
+	\item Repositorio en \textbf{BitBucket} con git (\url{https://bitbucket.org/})
+	\item \textbf{Android Studio} para el cliente Android del sistema
+	\item \textbf{Eclipse Mars.2} para el cliente con JavaCV
+	\item \textbf{Sublime Text 3} para editar archivos Bash, Makefiles y código Python.
+	\item \textbf{Arduino IDE} para el código de la placa Arduino 
+
+\end{itemize}
+
+
+\subsection{Despliegue}
+
+El despliegue de los servidores se lleva a cabo mediante la terminal de Linux
+
+\begin{itemize}
+	\item \textbf{Ubuntu 14.04}
+	\item \textbf{Makefile}
+	\item \textbf{Bash}
+	\item \textbf{cvlc} (VLC para la terminal de Linux)
+\end{itemize}
+
+
+\subsection{Documentación}
+
+La documentación se ha elaborado utilizando las siguientes herramientas:
+
+\begin{itemize}
+	\item \textbf{TeXstudio}: editor de documentos LaTeX.
+	\item \textbf{Creately}: aplicación web para el diseño de diagramas que puede ser utilzada en \url{http://creately.com/} 
+	\item \textbf{README.md} de BitBucket. Markdown (.md) es un lenguaje de marcas, mucho más simple que HTML, orientado a documentar repositorios.
+\end{itemize}
+
 
 \newpage \thispagestyle{empty} % Página vacía 

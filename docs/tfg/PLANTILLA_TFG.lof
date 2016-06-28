@@ -1,45 +1,56 @@
 \select@language {spanish}
 \select@language {spanish}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces \textbf {Ejemplo de aplicación para Google Cardboard}. Utiliza OpenGL para renderizar los gráficos y los muestra para adaptarse a cada ojo.\relax }}{2}{figure.caption.18}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces \textbf {Movimiento de la cabeza} alrededor del eje vertical\relax }}{2}{figure.caption.19}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces \textbf {Google Carbdoard}: las gafas de realidad virtual a partir de unas lentes, cartón y un smartphone\relax }}{3}{figure.caption.20}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces \textbf {Ejemplo de aplicación para Google Cardboard}. Utiliza OpenGL para renderizar los gráficos y los muestra adaptándose a cada ojo.\relax }}{2}{figure.caption.14}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces \textbf {Movimiento de la cabeza} alrededor del eje vertical\relax }}{2}{figure.caption.15}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces \textbf {Google Carbdoard}: las gafas de realidad virtual a partir de unas lentes, cartón y un smartphone\relax }}{3}{figure.caption.16}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \textbf {Sensorama}\relax }}{6}{figure.caption.18}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \textbf {Coordenadas polares}. Azimuth o Yaw ($\Psi $), Pitch ($\Phi $), Roll ($\theta $)\relax }}{7}{figure.caption.20}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \textbf {Diagrama conceptual de la red del sistema}\relax }}{10}{figure.caption.21}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \textbf {Diagrama de componentes del sistema}. Se pueden apreciar los distintos componentes, las interfaces que ofrecen y requieren y el protocolo que utilizan para comunicarse entre sí.\relax }}{11}{figure.caption.22}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \textbf {Diagrama de actividad de la aplicación para Android}. En ocre, las vistas de la aplicación. En azul, las interacciones del usuario. En rojo, las respuestas del sistema.\relax }}{13}{figure.caption.26}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces \textbf {Diagrama de clases del servidor de control}\relax }}{14}{figure.caption.27}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces \textbf {Diagrama de clases de la aplicación para Android}\relax }}{15}{figure.caption.28}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \textbf {Captura de cámara con lente \textit {fish-eye}.} Esta cámara de alta definición obtiene un gran ángulo de visión a coste de la marcada curvatura de la imagen.\relax }}{20}{figure.caption.30}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \textbf {Captura de cámara con lente normal}. Tomada a la misma distancia. La cámara de por sí tiene menos resolución, lo cual afecta directamente a la calidad de la imagen y la lente le da \textit {zoom} a la captura, renunciando a un amplio ángulo de visión pero sin sufrir deformaciones.\relax }}{21}{figure.caption.31}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \textbf {Circuito del Arduino controlando el servomotor}. El cable rojo va a VCC (3.3V) de la placa arduino, el cable negro a GND (tierra) y el cable blanco al PWM correspondiente. Variando el valor de la señal analógica del PWM, conseguimos cambiar de sentido y de intensidad. \relax }}{26}{figure.caption.37}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces \textbf {Diagrama conceptual de la red del sistema}\relax }}{8}{figure.caption.27}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces \textbf {Coordenadas polares}. Azimuth ($\Psi $), Pitch ($\Phi $), Roll ($\theta $)\relax }}{9}{figure.caption.28}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces \textbf {Diagrama de componentes del sistema}. Se pueden apreciar los distintos componentes, las interfaces que ofrecen y requieren y el protocolo que utilizan para comunicarse entre sí.\relax }}{10}{figure.caption.29}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces \textbf {Diagrama de clases del servidor de control}\relax }}{11}{figure.caption.34}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces \textbf {Diagrama de clases de la aplicación para Android}\relax }}{12}{figure.caption.36}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces \textbf {Diagrama de actividad de la aplicación para Android}. En ocre, las vistas de la aplicación. En azul, las interacciones del usuario. En rojo, las respuestas del sistema.\relax }}{13}{figure.caption.37}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces \textbf {Patrón de diseño \textit {Singleton}}. La única instancia de esta clase puede ser referenciada invocando al método público y estático \textit {getInstance()}\relax }}{35}{figure.caption.42}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces \textbf {Atributos de la instancia}. Estos son los datos que se almacenan en esta clase. Sus correspondientes \textit {getters} y \textit {setters} son de acceso público\relax }}{35}{figure.caption.43}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces \textbf {Atributos de la clase}. \relax }}{36}{figure.caption.44}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces \textbf {Método constructor}. \relax }}{36}{figure.caption.45}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces \textbf {Método \textit {send()}}. Este método se encarga de enviar un mensaje, en forma de una cadena de caracteres, a través del socket UDP previamente inicializado en el constructor.\relax }}{36}{figure.caption.46}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces \textbf {Definición de la clase, AddressManager y \textit {onCreate()}}. \relax }}{36}{figure.caption.47}
+\contentsline {figure}{\numberline {A.7}{\ignorespaces \textbf {Método \textit {updateValues()}}. Controlador del botón \enquote {Update values}. Accede a los \textit {EditText} de la vista y los almacena en el modelo (AddressManager)\relax }}{37}{figure.caption.48}
+\contentsline {figure}{\numberline {A.8}{\ignorespaces \textbf {Método \textit {nextActivity()}}. \relax }}{37}{figure.caption.49}
+\contentsline {figure}{\numberline {A.9}{\ignorespaces \textbf {Inicialización de objeto VideoView}. El mismo proceso se realiza para myVideoViewRight y ambos comparten el mismo MediaController.\relax }}{38}{figure.caption.50}
+\contentsline {figure}{\numberline {A.10}{\ignorespaces \textbf {Acceso a los sensores y creación del objeto \textit {PositionSender}}: \relax }}{38}{figure.caption.51}
+\contentsline {figure}{\numberline {A.11}{\ignorespaces \textbf {Hilo de envío} de la posición al servidor de control\relax }}{39}{figure.caption.52}
+\contentsline {figure}{\numberline {A.12}{\ignorespaces \textbf {Método \textit {onSensorChanged()}}: Realiza el cálculo de las coordenadas polares (figura~\ref {fig:coordenadas_polares}) cada vez que los sensores cambian de valor.\relax }}{39}{figure.caption.53}
+\contentsline {figure}{\numberline {A.13}{\ignorespaces \textbf {Método \textit {onBackPressed()}}: se ejecuta cuando se presiona el botón de los dispositivos Android con forma de triángulo.\relax }}{40}{figure.caption.54}
+\contentsline {figure}{\numberline {A.14}{\ignorespaces \textbf {Script de despliegue} de los servidores multimedia.\relax }}{40}{figure.caption.55}
+\contentsline {figure}{\numberline {A.15}{\ignorespaces \textbf {Cabecera del código del Arduino}.\relax }}{41}{figure.caption.56}
+\contentsline {figure}{\numberline {A.16}{\ignorespaces \textbf {Función auxiliar \textit {myRead()}}. Lee caracter a caracter del puerto serial hasta encontrar el valor '\textbackslash n' y convierte la cadena de caracteres obtenida en un valor numérico.\relax }}{41}{figure.caption.57}
+\contentsline {figure}{\numberline {A.17}{\ignorespaces \textbf {Función \textit {setup()} de Arduino}. Esta función se ejecuta al arrancarse la placa.\relax }}{41}{figure.caption.58}
+\contentsline {figure}{\numberline {A.18}{\ignorespaces \textbf {Función \textit {loop()} de Arduino}. Esta función se ejecuta indefinidamente después de ejecutarse \textit {setup()}.\relax }}{42}{figure.caption.59}
+\contentsline {figure}{\numberline {A.19}{\ignorespaces \textbf {Definición de la clase y constructor de \textit {ServoControl}}. El ángulo inicial es $\Psi _0 = 0^\circ $. El constructor crea un objeto \textit {Serial} en el puerto 9600 a partir de su ruta en el sistema operativo.\relax }}{42}{figure.caption.60}
+\contentsline {figure}{\numberline {A.20}{\ignorespaces \textbf {Definición de la clase y constructor de \textit {ServoControl}}.\relax }}{42}{figure.caption.61}
+\contentsline {figure}{\numberline {A.21}{\ignorespaces \textbf {Inicialización de recursos del servidor de control}.\relax }}{43}{figure.caption.62}
+\contentsline {figure}{\numberline {A.22}{\ignorespaces \textbf {Bucle del servidor de control}.\relax }}{43}{figure.caption.63}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces \textbf {Formulario de la aplicación móvil}. Permite al usuario modificar las direcciones de los tres servidores\relax }}{17}{figure.caption.41}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces \textbf {Circuito del Arduino controlando el servomotor}. El cable rojo va a VCC (3.3V) de la placa arduino, el cable negro a GND (tierra) y el cable blanco al PWM correspondiente. Variando el valor de la señal analógica del PWM, conseguimos cambiar de sentido y de intensidad. \relax }}{19}{figure.caption.44}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces \textbf {Aplicación funcionando con cámaras \textit {fish-eye} en los servidores de vídeo.} Esta imagen es una captura de pantalla del dispositivo Android desde el que se han hecho las pruebas.\relax }}{23}{figure.caption.50}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces \textbf {Aplicación funcionando.} Esta imagen es una captura de pantalla del dispositivo Android desde el que se han hecho las pruebas.\relax }}{23}{figure.caption.51}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces \textbf {Patrón de diseño \textit {Singleton}}. La única instancia de esta clase puede ser referenciada invocando al método público y estático \textit {getInstance()}\relax }}{31}{figure.caption.58}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces \textbf {Atributos de la instancia}. Estos son los datos que se almacenan en esta clase. Sus correspondientes \textit {getters} y \textit {setters} son de acceso público\relax }}{31}{figure.caption.59}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces \textbf {Atributos de la clase}. \relax }}{32}{figure.caption.60}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces \textbf {Método constructor}. \relax }}{32}{figure.caption.61}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces \textbf {Método \textit {send()}}. Este método se encarga de enviar un mensaje, en forma de una cadena de caracteres, a través del socket UDP previamente inicializado en el constructor.\relax }}{32}{figure.caption.62}
-\contentsline {figure}{\numberline {A.6}{\ignorespaces \textbf {Definición de la clase, AddressManager y \textit {onCreate()}}. \relax }}{32}{figure.caption.63}
-\contentsline {figure}{\numberline {A.7}{\ignorespaces \textbf {Método \textit {updateValues()}}. Controlador del botón \enquote {Update values}. Accede a los \textit {EditText} de la vista y los almacena en el modelo (AddressManager)\relax }}{33}{figure.caption.64}
-\contentsline {figure}{\numberline {A.8}{\ignorespaces \textbf {Método \textit {nextActivity()}}. \relax }}{33}{figure.caption.65}
-\contentsline {figure}{\numberline {A.9}{\ignorespaces \textbf {Inicialización de objeto VideoView}. El mismo proceso se realiza para myVideoViewRight y ambos comparten el mismo MediaController.\relax }}{34}{figure.caption.66}
-\contentsline {figure}{\numberline {A.10}{\ignorespaces \textbf {Acceso a los sensores y creación del objeto \textit {PositionSender}}: \relax }}{34}{figure.caption.67}
-\contentsline {figure}{\numberline {A.11}{\ignorespaces Hilo de envío de la posición al servidor de control\relax }}{35}{figure.caption.68}
-\contentsline {figure}{\numberline {A.12}{\ignorespaces \textbf {Método \textit {onSensorChanged()}}: Realiza el cálculo de las coordenadas polares (figura~\ref {fig:coordenadas_polares}) cada vez que los sensores cambian de valor.\relax }}{36}{figure.caption.69}
-\contentsline {figure}{\numberline {A.13}{\ignorespaces \textbf {Método \textit {onBackPressed()}}: \relax }}{36}{figure.caption.70}
-\contentsline {figure}{\numberline {A.14}{\ignorespaces Script de despliegue de los servidores multimedia\relax }}{37}{figure.caption.71}
-\contentsline {figure}{\numberline {A.15}{\ignorespaces \textbf {Cabecera del código del Arduino}\relax }}{37}{figure.caption.72}
-\contentsline {figure}{\numberline {A.16}{\ignorespaces \textbf {Función auxiliar \textit {myRead()}}. Lee caracter a caracter del puerto serial hasta encontrar el valor '\textbackslash n' y convierte la cadena de caracteres obtenida en un valor numérico\relax }}{38}{figure.caption.73}
-\contentsline {figure}{\numberline {A.17}{\ignorespaces \textbf {Función \textit {setup()} de Arduino}. Esta función se ejecuta al arrancarse la placa\relax }}{38}{figure.caption.74}
-\contentsline {figure}{\numberline {A.18}{\ignorespaces \textbf {Función \textit {loop()} de Arduino}. Esta función se ejecuta indefinidamente después de ejecutarse \textit {setup()}\relax }}{38}{figure.caption.75}
-\contentsline {figure}{\numberline {A.19}{\ignorespaces \textbf {Definición de la clase y constructor de \textit {ServoControl}}. El ángulo inicial es $\Psi _0 = 0^\circ $. El constructor crea un objeto \textit {Serial} en el puerto 9600 a partir de su ruta en el sistema operativo.\relax }}{39}{figure.caption.76}
-\contentsline {figure}{\numberline {A.20}{\ignorespaces \textbf {Definición de la clase y constructor de \textit {ServoControl}}. \relax }}{39}{figure.caption.77}
-\contentsline {figure}{\numberline {A.21}{\ignorespaces \textbf {Inicialización de recursos del servidor de control}. \relax }}{40}{figure.caption.78}
-\contentsline {figure}{\numberline {A.22}{\ignorespaces \textbf {Bucle del servidor de control}. \relax }}{40}{figure.caption.79}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces \textbf {Circuito eletrónico}: las conexiones a la placa arduino se correspondente con el diseño en de la figura \ref {fig:circuito_arduino}. El cable conectado por la derecha de la placa se conecta al PC a través de cualquier puerto USB.\relax }}{45}{figure.caption.64}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces \textbf {Videocámaras}: se encuentran unidas por una estructura de cartón fijada con cinta americana.\relax }}{46}{figure.caption.65}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces \textbf {Videocámaras sobre el servomotor}: la estructura con las cámaras se coloca perpendicularmente sobre una estructura circular de un par de pulgadas de diámetro, que a su vez está enganchada al engranaje al cual hace girar el servomotor.\relax }}{46}{figure.caption.66}
+\contentsline {figure}{\numberline {B.4}{\ignorespaces \textbf {Google Cardboard original}: \relax }}{47}{figure.caption.67}
+\contentsline {figure}{\numberline {B.5}{\ignorespaces \textbf {Gafas de realidad virtual de plástico}: estas gafas son más ergonómicas, ya que tiene gomaespuma en las zonas que hacen contacto con la cara y la cinta elástica se ajusta mejor a la cabeza.\relax }}{48}{figure.caption.68}
+\contentsline {figure}{\numberline {B.6}{\ignorespaces \textbf {Gafas de realidad virtual de plástico}: la parte blanca está compuesta de unas ventosas sobre las que se adhiere el dispositivo móvil para que éste no se mueva con los movimientos de la cabeza del usuario.\relax }}{48}{figure.caption.69}
+\contentsline {figure}{\numberline {B.7}{\ignorespaces \textbf {Gafas de realidad virtual de plástico}: las lentes enfocan las imágenes que se muestran en la pantalla del dispositivo móvil, adaptándolas al ojo para que el usuario pueda sentir la profundidad a partir de las dos vistas.\relax }}{49}{figure.caption.70}
+\contentsline {figure}{\numberline {B.8}{\ignorespaces \textbf {\textit {Smartphone} Android}: Utiliza la versión Android 5.1.1 Lollipop como sistema operativo. Resolución full HD (1920x1080p).\relax }}{49}{figure.caption.71}
+\contentsline {figure}{\numberline {B.9}{\ignorespaces \textbf {Formulario de la aplicación móvil}. Permite al usuario modificar las direcciones de los tres servidores.\relax }}{50}{figure.caption.72}
+\contentsline {figure}{\numberline {B.10}{\ignorespaces \textbf {Vista principal de la aplicación móvil}. Cada imagen se corresponde a una captura de una de las cámaras alojadas en el servidor. Esta disposición de las fotografías otorga al usuario visión estereoscópica, es decir, la capacidad de sentir profundidad.\relax }}{50}{figure.caption.73}
 \addvspace {10\p@ }

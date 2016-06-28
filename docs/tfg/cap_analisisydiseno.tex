@@ -3,13 +3,12 @@
 
 \lsection{Análisis}
 \subsection{Descripción del producto}
-\producto es un producto que permite al usuario ver a través de los ojos de un avatar. Esto se consigue gracias a unas gafas de realidad virtual *REFERENCIA FIGURA* conectadas a través Internet a un robot con dos cámaras por ojos. Los movimientos de la cabeza del usuario serán también transmitidos a través de la red hasta llegar al robot, que ejecuta un programa que recibe estos datos y actualiza la orientación de las cámaras en tiempo real para dar la sensación al usuario final de estar en otro cuerpo.
+\producto es un producto que permite al usuario ver a través de los ojos de un avatar. Esto se consigue gracias a unas gafas de realidad virtual (figura \ref{fig:googlecardboard}) conectadas por Internet a un robot con dos cámaras por ojos. Los movimientos de la cabeza del usuario serán también transmitidos a través de la red hasta llegar al robot, que ejecuta un programa que recibe estos datos y actualiza la orientación de las cámaras en tiempo real para dar la sensación al usuario final de estar en otro cuerpo.
 
-\todo[inline]{Referencia a gafas de VR: \currentname}
-\subsection{Viabilidad}
-1
-
-\todo[inline]{Análisis: \currentname}
+%\todo[inline]{Referencia a gafas de VR: \currentname}
+%\subsection{Viabilidad}
+%
+%\todo[inline]{Análisis: \currentname}
 
 \subsection{Objetivos y funcionalidad}
 
@@ -53,14 +52,6 @@ El sistema no debería necesitar ningún tipo de persistencia. Las conexiones se r
 Esta arquitectura del software está orientada a permitir exclusivamente una conexión simultánea. Al tratarse de una aplicación en tiempo real, más conexiones podrían congestionar el tráfico en la red y saturar los recursos de los servidores. Además, la rotación de los motores sólo debería controlarse desde un solo cliente.
 
 
-\begin{figure}[H]
-	\centerline{
-		\mbox{\includegraphics[width=4.00in]{images/coordinates.jpg}}
-	}
-	\caption{\textbf{Coordenadas polares}. Azimuth ($\Psi$), Pitch ($\Phi$), Roll ($\theta$)}
-	\label{fig:coordenadas_polares}
-\end{figure}
-
 
 \lsection{Arquitectura}
 
@@ -80,7 +71,7 @@ El cliente es el componente central de este sistema heterogéneo. Éste está compu
 
 \subsection{Vista funcional} % La visión funcional: describe qué hace cada componente.
 
-Descripción por separado de los componentes del sistema.
+%Descripción por separado de los componentes del sistema.
 
 \subsubsection{Servidor de vídeo}
 %\todo[inline]{Vista funcional: \currentname}
@@ -98,20 +89,31 @@ Este servidor también debe poder referenciarse del mismo modo que el anterior. R
 Finalmente, el cliente se integra junto a estas partes anteriores de la siguiente forma: por un lado, ha de poder conectarse a los dos servidores de vídeo a través de sus direcciones para recibir sendos flujos de fotogramas que se mostrarán a través de la pantalla; por otro lado, ha de enviar continuamente sus coordenadas polares al servidor de control para que el Arduino pueda hacer girar el motor consecuentemente.
 
 \subsection{Vista dinámica} % La visión dinámica: describe cómo se comportan los componentes a lo largo del tiempo y como interactúan entre sí.
-\todo[inline]{\currentname}
-Aquí se muestra cómo cambia el sistema con el tiempo y dados ciertos eventos. Toda esta evolución puede observarse prácticamente en el diagrama \ref{fig:diagrama_actividad_app}, correspondiente al cliente.
+%\todo[inline]{\currentname}
+Prácticamente toda la evolución del sistema a lo largo del tiempo puede observarse en el diagrama \ref{fig:diagrama_actividad_app}, correspondiente al cliente. Por otro lado, los servidores pueden estar esperando a una conexión (el cliente todavía no se ha conectado) o enviando/recibiendo un flujo de datos.
 
-\lsection{Diseño}
+\begin{figure}[p]
+	\centerline{
+		\mbox{\includegraphics[width=7.00in]{images/diagrama_actividad.png}}
+	}
+	\caption{\textbf{Diagrama de actividad de la aplicación para Android}. En ocre, las vistas de la aplicación. En azul, las interacciones del usuario. En rojo, las respuestas del sistema.}
+	\label{fig:diagrama_actividad_app}
+\end{figure}
+
+\newpage
+
+
+\lsection{Diseño} 
 
 \subsection{Servidor de vídeo}
 %\todo[inline]{Diseño: \currentname}
 
-Como se explica en el apartado de implementación, esta parte del sistema no se ha llevado a cabo programando, si no utilizando una herramienta \textit{open source}, por lo que no procede un desarrollo del diseño de los servidores de vídeo.
+Como se explica en el apartado de implementación, esta parte del sistema no se ha llevado a cabo programando, sino utilizando una herramienta \textit{open source}, por lo que 1no procede un desarrollo del diseño de los servidores de vídeo.
 
 \subsection{Servidor de control}
 %\todo[inline]{Diseño: \currentname}
 
-En el propio servidor de control son dos las clases más importantes, como se detalla en la figura \ref{fig:diagrama_clases_servidor_control}:
+El servidor de control está implementado en Python y son dos las clases más importantes, como se detalla en la figura \ref{fig:diagrama_clases_servidor_control}:
 
 \begin{itemize}
 	
@@ -120,7 +122,7 @@ En el propio servidor de control son dos las clases más importantes, como se det
 
 \end{itemize}
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centerline{
 		\mbox{\includegraphics[width=4.00in]{images/diagrama_clases_servidor_control.png}}
 	}
@@ -129,11 +131,11 @@ En el propio servidor de control son dos las clases más importantes, como se det
 \end{figure}
 
 \subsection{Cliente móvil}
-\todo[inline]{Diseño: \currentname}
+%\todo[inline]{Diseño: \currentname}
 
+El cliente consta principalmente de cuatro clases Java. Dos de ellas se corresponden con las dos vistas de la aplicación. Para representar esto, las clases han de extender la funcionalidad de \textit{Android.Activity}. Estas dos han de tener acceso al \textit{Singleton} AddressManager, que se encarga de gestionar las direcciones y puertos de los servidores. Por último, la clase MainActivity debe instanciar a la clase PositionSender, que se encarga de establecer un canal de comunicación UDP con el servidor de control y de enviar periódicamente un mensaje con la orientación del dispositivo móvil, obtenida a través de los sensores.
 
-
-\begin{figure}[H]
+\begin{figure}[h]
 	\centerline{
 		\mbox{\includegraphics[width=7.00in]{images/diagrama_clases_app.png}}
 	}
@@ -141,13 +143,6 @@ En el propio servidor de control son dos las clases más importantes, como se det
 	\label{fig:diagrama_clases_app}
 \end{figure}
 
-\begin{figure}[H]
-	\centerline{
-		\mbox{\includegraphics[width=7.00in]{images/diagrama_actividad.png}}
-	}
-	\caption{\textbf{Diagrama de actividad de la aplicación para Android}. En ocre, las vistas de la aplicación. En azul, las interacciones del usuario. En rojo, las respuestas del sistema.}
-	\label{fig:diagrama_actividad_app}
-\end{figure}
 
 %\todo[inline]{Diseño: \textbf{Diagrama de secuencia}}
 

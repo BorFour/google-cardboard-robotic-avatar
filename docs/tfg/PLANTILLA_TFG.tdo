@@ -1,20 +1,8 @@
-\contentsline {todo}{ Resumen}{\es@scroman {iii}}{section*.5}
-\contentsline {todo}{ Palabras Clave}{\es@scroman {iii}}{section*.7}
-\contentsline {todo}{ Abstract}{\es@scroman {iv}}{section*.9}
-\contentsline {todo}{ Key words}{\es@scroman {iv}}{section*.11}
-\contentsline {todo}{ Agradecimientos}{\es@scroman {v}}{section*.13}
-\contentsline {todo}{Estado del arte: Introducción}{5}{section*.21}
-\contentsline {todo}{Estado del arte: Historia, nacimiento y evolución.}{5}{section*.22}
-\contentsline {todo}{Estado del arte: Estado actual}{5}{section*.23}
-\contentsline {todo}{Estado del arte: Conceptos previos}{6}{section*.24}
-\contentsline {todo}{Referencia a gafas de VR: Descripción del producto}{7}{section*.25}
-\contentsline {todo}{Análisis: Viabilidad}{7}{section*.26}
-\contentsline {todo}{Vista dinámica}{10}{section*.33}
-\contentsline {todo}{Diseño: Cliente móvil}{11}{section*.35}
-\contentsline {todo}{Implementación: Streaming multimedia, códecs y formatos de vídeo}{17}{section*.43}
-\contentsline {todo}{Implementación: Cliente/servidor UDP}{19}{section*.45}
-\contentsline {todo}{Pruebas: Calidad de servicio}{21}{section*.48}
-\contentsline {todo}{Cámaras con objetivo ojo de pez: cambiar por imagen con fisheye}{22}{section*.49}
-\contentsline {todo}{Pruebas: Experimentos del sistema completo y resultados}{24}{section*.53}
-\contentsline {todo}{Conclusiones}{25}{section*.54}
-\contentsline {todo}{Trabajo futuro}{25}{section*.55}
+\contentsline {todo}{ Agradecimientos}{\es@scroman {v}}{section*.9}
+\contentsline {todo}{Estado del arte: Historia, nacimiento y evolución.}{5}{section*.17}
+\contentsline {todo}{Estado del arte: Conceptos básicos de la realidad virtual}{7}{section*.19}
+\contentsline {todo}{Manual de usuario: Repositorio}{51}{section*.74}
+\contentsline {todo}{Manual de usuario: Uso}{51}{section*.75}
+\contentsline {todo}{Manual de usuario: Despliegue de los servidores de vídeo}{51}{section*.76}
+\contentsline {todo}{Manual de usuario: Código arduino}{51}{section*.77}
+\contentsline {todo}{Manual de usuario: Despliegue del servidor de control}{51}{section*.78}

@@ -1,24 +1,21 @@
-\chapter{Pruebas y resultados}
+\chapter{Tecnología y pruebas}
 \label{chap:experimentos}
 
 \lsection{Calidad de servicio}
 
-Para medir la \textit{QoS}, se han hecho pruebas combinando distintos clientes, distintos servidores y distintos interfaces de red.
-\todo[inline]{Pruebas: \currentname}
-\subsection{Servidores}
-A continuación, se comentan las distintas implementaciones de los servidores multimedia que se han contemplado. Las siguientes herramientas listadas se ejecutan a través de la terminal de Linux y los parámetros de los streams se especifican como argumentos de los correspondientes ejecutables:
-\begin{itemize}
-	\item \textbf{FFMpeg}
-	\item \textbf{FFServer}
-	\item \textbf{GStreamer}
-	\item \textbf{CVLC}
-\end{itemize}
+Para medir la \textit{QoS}, se han hecho pruebas combinando distintos clientes, distintos servidores y distintos interfaces de red con el fin de hallar la mejor combinación válida para nuestro sistema.
 
+%\todo[inline]{Pruebas: \currentname}
+\subsection{Servidores}
+
+Las distinas herraminetas que se han contemplado para desplegar los servidores multimedia son las siguientes: \textbf{FFMpeg, FFServer, GStreamer y VLC (cvlc)}. Todas éstas se ejecutan, de manera similar, a través de la terminal de Linux y los parámetros de los streams se especifican como argumentos de los correspondientes ejecutables.
 
 \subsection{Clientes}
 
+Se han hecho pruebas con varios clientes para poder distinguir cuándo existía un \textit{delay} de los \textit{streams} como consecuencia de una congestión en la red o cuándo este retraso estaba causado por un elevado tiempo de procesamiento en la parte del cliente.
+
 \begin{itemize}
-	\item \textbf{FPlay}: se ejecuta a través de la terminal y, a parte de mostrar el \textit{stream}, muestra por la terminal datos acerca de éste.
+	\item \textbf{FPlay}: se ejecuta a través de la terminal y, aparte de mostrar el \textit{stream}, muestra por la terminal datos acerca de éste.
 	\item \textbf{VLC}: este famoso reproductor de multimedia también puede usarse para abrir contenido a través de una URL. 
 	\item \textbf{RTSP Player}: Es una \textit{app} para Android que se conecta a un vídeo RTSP a través de su enlace.
 	\item \textbf{Programa con JavaCV}: JavaCV utiliza wrappers para diversas librerías de visión por computador. Este programa de elaboración propia conecta con los servidores multimedia a través de la URL y los muestra en dos ventanas, una al lado de la otra. La idea era poder portar este código a la aplicación de Android, utilizando el archivo .jar para ARM en vez del archivo para amd64. Al probarlo, surgía un error inidentificable al abrir los \textit{streams} y, tras bastante esfuerzo intentando solventarlo sin resultado, hubo que buscar otra solución.
@@ -28,7 +25,7 @@ A continuación, se comentan las distintas implementaciones de los servidores mul
 \subsection{Interfaces}
 
 \begin{itemize}
-	\item \textbf{\textit{localhost}}: Pseudónimo de la dirección IP 127.0.0.1, se usa para referirse a la propia máquina. Para pruebas en las que el cliente y el servidor se encuentran ejecutándose en la misma máquina. La pérdida de paquetes es ínfima en este escenario.
+	\item \textbf{\textit{localhost}}: Pseudónimo de la dirección IP 127.0.0.1, se usa para referirse a la propia máquina. Para pruebas en las que el cliente y el servidor se encuentran ejecutándose en el mismo ordenador. La pérdida de paquetes es ínfima en este escenario.
 	\item \textbf{Multicast Wi-Fi}: La única forma de desplegar el servidor RTSP utilizando un interfaz de red \textit{wireless}
 	y que pudiese ser accedido desde otras máquinas era utilizando una dirección IP multicast.
 	\item \textbf{Unicast RJ-45}: Finalmente, el cableado a través de un cable RJ-45 al router era la mejor opción (como era de esperar). Ofrece un MTU mayor, mayor ancho de banda y menos pérdida de paquetes. Además, permite desplegar el servidor en la dirección IP correspondiente a la interfaz de red (\textit{eth0}), lo cual hace que los servidores multimedia sean unicast, lo que quiere decir que sólo se permite una conexión a la vez.
@@ -36,6 +33,50 @@ A continuación, se comentan las distintas implementaciones de los servidores mul
 
 \subsection{Pruebas significativas}
 
+En el cuadro \ref{tabla:pruebas_qos} pueden se encuentran las pruebas más significativas de todas las llevadas a cabo, en las cuales se comentan las prestaciones que ofrece la configuración dada.
+
+\begin{table}[]
+	\centering
+	\caption{\textbf{Pruebas significativas de la calidad de servicio}}
+	\label{tabla:pruebas_qos}
+	\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{6cm}|}
+		\hline
+		\textbf{Servidor} & \textbf{Cliente} & \textbf{Interfaz de red} & \textbf{Resultados} \\ \hline
+		cvlc & vlc & localhost & La imagen se muestra con un delay de 2 segundos y sin apenas perder paquetes con el códec H264. 
+		
+		\\
+		cvlc & vlc & multicast Wi-Fi & Se pierden muchos paquetes y la calidad de la imagen disminuye drásticamente. Queda descartado desplegar el servidor en una IP de la interfaz Wi-Fi y el modo multicast, ya que el objetivo es el de tener una conexión simultánea únicamente. 
+		
+		\\
+		cvlc & vlc & unicast RJ-45 & La calidad y prestaciones son muy parecidas a las mismas pruebas en local. 
+		
+		\\
+		ffmpeg, ffserver, gstreamer & fplay & localhost & Estos tres servidores han de ser accedidos a través de un fichero SDP. Generándolo y pasándolo como argumento a fplay, se consiguen reproducir sin problemas los tres streams. 
+		
+		\\
+		ffmpeg, ffserver, gstreamer & Programa con JavaCV (Linux) & localhost & Indicando la ruta del archivo SDP, el objeto FFMpegGrabber consigue abrir los streams. Falla cuando se intenta acceder a través de la URL 
+		
+		\\
+		ffmpeg, ffserver, gstreamer & Programa con JavaCV (Android) & unicast RJ-45 & Los recursos en Android han de ser abiertos a través de un descriptor de fichero (constante estática de la clase R), pero el constructor de FFMpegGrabber requiere una ruta en el sistema de archivos o una URL en un String o un objeto File. 
+		
+		\\
+		cvlc & Programa con JavaCV (Android) & unicast RJ-45 & La herramienta cvlc despliega un servidor RTSP que puede ser accedido a través de una URL, pero ocurre un error desconocido sin identificar en el constructor de FFMpegGrabber.
+		\\ \hline
+	\end{tabular}
+\end{table}
+
+\subsection{Configuración final}
+
+Después de llevar a cabo este conjunto de pruebas de la calidad de servicio, la configuración del prototipo es la siguiente:
+
+\begin{enumerate}
+	\item \textbf{Cliente}: los dos clientes de vídeo utilizados en la aplicación son los proporcionados por el SDK de Android a través de la clase \textbf{VideoView}. 
+	\item \textbf{Servidor} de vídeo: se despliega utilizando la herramienta \textbf{clvc}, ya que permite al cliente abrir el \textit{stream} a partir de una URL sin necesidad un archivo SDP. Se configura en modo Unicast, asociándolo a la dirección IP de la tarjeta de red cableada por RJ-45.
+\end{enumerate}
+
+Esta configuración tiene un \textit{delay} total aproximado de 4 a 6 segundos, de los cuales 2 eran propios del servidor RTSP desplegado con cvlc, siendo el resto retraso de proceso en el cliente.
+
+\newpage
 
 \lsection{Cámaras}
 \label{sect:prueba_camaras}
@@ -46,14 +87,14 @@ A continuación, se comentan las distintas implementaciones de los servidores mul
 También conocidas como \textit{fisheye lens}, las lentes de estas cámaras proporcionan un ángulo de visión superior al resto de tipos de lentes a cambio de una distorsión visual severa. Una vez montado todo el sistema, se ha probado a ejecutar la aplicación con las gafas de realidad virtual y conectándose a los dos servidores de vídeos alimentados por fotogramas de estas cámaras. El cerebro parece no estar preparado para sentir la profundidad a partir de dos imágenes de este tipo y, a pesar de las prestaciones que podrían haber ofrecido, las cámaras con objetivo de ojo de pez no han resultado idóneas para este proyecto.
 
 
-\todo[inline]{\currentname: cambiar por imagen con fisheye}
+%\todo[inline]{\currentname: cambiar por imagen con fisheye}
 
 \begin{figure}[H]
 	\centerline{
-		\mbox{\includegraphics[width=4.00in]{images/captura_cliente_1.jpg}}
+		\mbox{\includegraphics[width=4.00in]{images/snapshot_fisheye.jpg}}
 	}
-	\caption{\textbf{Aplicación funcionando con cámaras \textit{fish-eye} en los servidores de vídeo.} Esta imagen es una captura de pantalla del dispositivo Android desde el que se han hecho las pruebas.}
-	\label{fig:captura_cliente_fisheye}
+	\caption{\textbf{Captura de cámara con lente \textit{fish-eye}.} Esta cámara de alta definición obtiene un gran ángulo de visión a coste de la marcada curvatura de la imagen.}
+	\label{fig:captura_fisheye}
 \end{figure}
 
 \subsection{Cámaras con lente normal}
@@ -62,21 +103,22 @@ Al final, unas webcam normales adquiridas en una tienda común de electrónica han
 
 \begin{figure}[H]
 	\centerline{
-		\mbox{\includegraphics[width=4.00in]{images/captura_cliente_1.jpg}}
+		\mbox{\includegraphics[width=4.00in]{images/snapshot_normal.jpg}}
 	}
-	\caption{\textbf{Aplicación funcionando.} Esta imagen es una captura de pantalla del dispositivo Android desde el que se han hecho las pruebas.}
-	\label{fig:captura_cliente_1}
+	\caption{\textbf{Captura de cámara con lente normal}. Tomada a la misma distancia. La cámara de por sí tiene menos resolución, lo cual afecta directamente a la calidad de la imagen y la lente le da \textit{zoom} a la captura, renunciando a un amplio ángulo de visión pero sin sufrir deformaciones.}
+	\label{fig:captura_normal}
 \end{figure}
+
 
 \lsection{Servomotor}
 \label{sect:prueba_servo}
 %\todo[inline]{Pruebas: \currentname}
 
-Los servomotores son capaces de girar en sentido horario o antihorario con mayor o menor velocidad angular. Esto se indica mediante una señal analógica de entrada, la cual producimos en este caso mediante los PWM de la placa Arduino. En materia de código, este valor se indica con un byte sin signo, es decir, un número natural en el rango [0, 255], como se explica en \cite{online:pwm}. Así pues, después de calibrar el motor con un destornillador se observando el comportamiento del servomotor para distintos valores analógicos. En el cuadro \ref{tabla:valores_servomotor} se encuentran estos resultados, que más tarde se usaron para la implementación de la clase manda valores al Arduino a través de un objeto \textit{Serial}.
+Los servomotores son capaces de girar en sentido horario o antihorario con mayor o menor velocidad angular. Esto se indica mediante una señal analógica de entrada, la cual producimos en este caso mediante los PWM de la placa Arduino. En materia de código, este valor se indica con un byte sin signo, es decir, un número natural en el rango [0, 255], como se explica en \cite{link:pwm}. Así pues, después de calibrar el motor con un destornillador se ha observado el comportamiento del servomotor para distintos valores analógicos. En el cuadro \ref{tabla:valores_servomotor} se encuentran estos resultados que posteriormente son utilizados por una clase que se encarga de enviar al Arduino los valores, según los cálculos que se detallan en el apartado de implementación, necesarios para hacer girar el motor.
 
 \begin{table}[H]
 	\centering
-	\caption{}
+	\caption{\textbf{Relación aproximada entre el desplazamiento angular y el valor analógico de entrada del servomotor}}
 	\label{tabla:valores_servomotor}
 	\begin{tabular}{@{}ccc@{}}
 		\toprule
@@ -89,7 +131,7 @@ Los servomotores son capaces de girar en sentido horario o antihorario con mayor
 	\end{tabular}
 \end{table}
 
-\lsection{Experimentos del sistema completo y resultados}
-\todo[inline]{Pruebas: \currentname}
+%\lsection{Experimentos del sistema completo y resultados}
+%\todo[inline]{Pruebas: \currentname}
 
 

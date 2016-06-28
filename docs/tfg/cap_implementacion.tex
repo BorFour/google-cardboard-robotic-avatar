@@ -12,7 +12,7 @@ A continuación se explican conceptos añadidos a la programación en \textit{Java}
 \item \textbf{Recursos y \textit{R}}: \textit{R} es una clase estática existente a través de generación automática de código que asigna un número entero a los distintos recursos del proyecto (archivos de texto, imágenes, audio...). Estos recursos pueden ser referenciados desde el código \textit{Java} mediante este identificador, que se encuentra en la clase \textit{R} como un tipo de dato \textit{public static int}.
 \item \textbf{\textit{Activity}}: la clase Activity se corresponde con una vista con una interfaz gráfica, un modelo con atributos de esta clase y controladores, correspondientes a los métodos. Para crear una nueva vista de la aplicación, se suele crear una clase que herede de ésta (\textit{extends}).
 \item \textbf{Interfaces \textit{handler}}: en el sistema operativo Android y en la propia aplicación ocurren distintos tipos de eventos que pueden ser más o menos interesantes dependiendo de los requisitos del programa. Para poder escuchar esos eventos y hacer algo cuando ocurren, se suelen implementar interfaces Java dentro de nuestra actividad. Así, cuando el SO notifique a la actividad de una de estas señales, se ejecutaré un método \textit{handler}, cuyo nombre se indica en la interfaz implementada asociada a este suceso.
-\item \textbf{\textit{Layout}}: el \textit{layout} es la distribución de los distintos elementos gráficos en la pantalla. Ésta puede indicarse de dos formas: programáticamente en alguna función de la actividad a través de diversas clases, forma que no suele ser habitual ni conveniente, o bien a través de un fichero XML. El SDK de Android ofrece la funcionalidad de cargar la distribución a partir del identificador de recurso de este archivo, creand internamente las clases que gestionan la distribución en la pantalla y asociándolas con la actividad.
+\item \textbf{\textit{Layout}}: el \textit{layout} es la distribución de los distintos elementos gráficos en la pantalla. Ésta puede indicarse de dos formas: programáticamente en alguna función de la actividad a través de diversas clases, forma que no suele ser ni habitual ni conveniente, o bien a través de un fichero XML. El SDK de Android ofrece la funcionalidad de cargar la distribución a partir del identificador de recurso de este archivo, creando internamente las clases que gestionan la distribución en la pantalla y asociándolas con la actividad.
 
 \end{itemize}
 \subsection{Aplicación}
@@ -21,27 +21,18 @@ Está compuesta por 4 clases escritas en Java, de las cuales 2 extienden a la cla
 
 \subsubsection{Gestor de direcciones}
 
-Esta clase implementa el patrón de diseño \textit{Singleton} (fragmento~\ref{fig:addressmanager_singleton}). Forma parte del modelo de la aplicación y almacena las direcciones y puertos de los servidores. Permite leer y escribir estos datos (fragmento~\ref{fig:addressmanager_atributos}) independientemente de la actividad en la que se encuentre el usuario a través de sus métodos de acceso públicos (\textit{getters} y \textit{setters}).
+Esta clase implementa el patrón de diseño \textit{Singleton} (figura~\ref{fig:addressmanager_singleton}). Forma parte del modelo de la aplicación y almacena las direcciones y puertos de los servidores. Permite leer y escribir estos datos (figura~\ref{fig:addressmanager_atributos}) independientemente de la actividad en la que se encuentre el usuario a través de sus métodos de acceso públicos (\textit{getters} y \textit{setters}).
 
 
 \subsubsection{Transmisor de posición}
 
-Esta sencilla clase auxiliar está asociada a un socket UDP que se crea en el constructor de esta misma, asociado a su vez a un puerto y una dirección IP determinadas (fragmento~\ref{fig:positionsender_constructor}). Encapsula las operaciones básicas con sockets, haciendo más sencilla la comunicación con el servidor de control a nivel de programación (fragmento~\ref{fig:positionsender_send}).
+Esta sencilla clase auxiliar está asociada a un socket UDP que se crea en el constructor de esta misma, asociado a su vez a un puerto y una dirección IP determinadas (figura~\ref{fig:positionsender_constructor}). Encapsula las operaciones básicas con sockets, haciendo más sencilla la comunicación con el servidor de control a nivel de programación (figura~\ref{fig:positionsender_send}).
 
 \subsubsection{Formulario}
 
-Esta actividad se muestra al iniciar la app. Al iniciarse, carga su layout a partir del fichero \textit{form.xml} y guarda la referencia a la instancia única del gestor de direcciones (fragmento~\ref{fig:formactivity_clase}). Las direcciones de sendos servidores multimedia con los streamings de vídeo han de ser indicadas mediante la URI completa, mientras que el servidor de control ha de indicarse introduciendo la dirección IP de la máquina en la que se encuentra alojado el servidor y el puerto por separado. Los valores que se muestran en la figura~\ref{fig:captura_formulario} son los valores por defecto de estos \textit{textboxs} que coinciden con las direcciones en las que se despliegan los servidores en el entorno de trabajo para agilizar así las pruebas.
+Esta actividad se muestra al iniciar la app. Al iniciarse, carga su layout a partir del fichero \textit{form.xml} y guarda la referencia a la instancia única del gestor de direcciones (figura~\ref{fig:formactivity_clase}). Las direcciones de sendos servidores multimedia con los streamings de vídeo han de ser indicadas mediante la URI completa, mientras que el servidor de control ha de indicarse introduciendo la dirección IP de la máquina en la que se encuentra alojado el servidor y el puerto por separado. Los valores que se muestran en la figura~\ref{fig:captura_formulario} son los valores por defecto de estos \textit{textboxs} que coinciden con las direcciones en las que se despliegan los servidores en el entorno de trabajo para agilizar así las pruebas.
 
-En el archivo XML asociado a esta actividad, también se indica el nombre de los \textit{handlers} de los botones; es decir, la función que se ejecutará al clickar sobre cada uno de estos dos elementos. Así pues, esta clase debe implementarlos. Al presionar el botón \textit{Update values}, esta clase accede al valor de todos los \textit{textboxs} y los almacena en el gestor anteriormente explicado (fragmento~\ref{fig:formactivity_updatevalues}). Al presionar el segundo botón, se abandona esta actividad y se inicia la aplicación principal, \textit{MainActivity} (fragmento~\ref{fig:formactivity_nextactivity}).
-
-
-\begin{figure}[h]
-	\centerline{
-		\mbox{\includegraphics[width=4.00in]{images/captura_formulario.jpg}}
-	}
-	\caption{\textbf{Formulario de la aplicación móvil}. Permite al usuario modificar las direcciones de los tres servidores}
-	\label{fig:captura_formulario}
-\end{figure}
+En el archivo XML asociado a esta actividad, también se indica el nombre de los \textit{handlers} de los botones; es decir, la función que se ejecutará al clickar sobre cada uno de estos dos elementos. Así pues, esta clase debe implementarlos. Al presionar el botón \enquote{Update values}, esta clase accede al valor de todos los \textit{textboxs} y los almacena en el gestor anteriormente explicado (figura~\ref{fig:formactivity_updatevalues}). Al presionar el segundo botón, se abandona esta actividad y se inicia la aplicación principal, \textit{MainActivity} (figura~\ref{fig:formactivity_nextactivity}).
 
 
 \subsubsection{Actividad principal}
@@ -50,17 +41,25 @@ Como en la actividad del formulario, al crearse se guarda la referencia al \text
 
 \begin{itemize}
 
-\item Seguidamente, se crean dos reproductores de vídeo que se situarán en estas dos vistas. En los constructores de estos objetos se pasan como parámetros las URI de los dos \textit{streams}, lo que hará que los vídeos se reproduzcan tan pronto como estos dos recursos estén disponibles (fragmento~\ref{fig:mainactivity_videoviewinit}). 
+\item Seguidamente, se crean dos reproductores de vídeo que se situarán en estas dos vistas. En los constructores de estos objetos se pasan como parámetros las URI de los dos \textit{streams}, lo que hará que los vídeos se reproduzcan tan pronto como estos dos recursos estén disponibles (figura~\ref{fig:mainactivity_videoviewinit}). 
 \item Se obtienen las referencias a los sensores a través del sistema operativo, mediante los cuales se calcularán las rotaciones del dispositivo móvil. Estos son el acelerómetro y la brújula.
-\item Se instancia un objeto de la clase Sender a partir de la IP y el puerto del servidor de control almacenados en el \textit{Singleton} (fragmento~\ref{fig:mainactivity_setupsensorposition})
-\item Se crea el hilo que se encargue de enviar constantemente la posición, como se muestra en la figura~\ref{fig:coordenadas_polares}). A priori, la solución más obvia es crear una clase que implemente la interfaz \textit{Runnable} y empezar un hilo mediante la clase \textit{Thread}. Tras este intento, el sistema operativo elimina este hilo porque, al parecer, consume mucha CPU, lo cual no permite a la actividad principal refrescar la interfaz gráfica. Es decir, genera inanición. Como solución y después de investigar este contratiempo, encontré la clase \textit{Handler} con su método de instancia \textit{postdelayed}. Esencialmente, se inicializa este \textit{Hanlder} con un objeto que implemente \textit{Runnable} y postdelayed crea una alarma que se activará después de un determinado número de milisegundos pasado como parámetro. Al activarse, se ejecute el método \textit{run()} de este handler. Con esto, creamos un objeto \textit{Runnable} que ejecute una vez el cuerpo del bucle y finalmente vuelva a montar la alarma, como si se tratase de una recursión infinita (fragmento~\ref{fig:mainactivity_hilosender}).
+\item Se instancia un objeto de la clase Sender a partir de la IP y el puerto del servidor de control almacenados en el \textit{Singleton} (figura~\ref{fig:mainactivity_setupsensorposition})
+\item Se crea el hilo que se encargue de enviar constantemente la posición, como se muestra en la figura~\ref{fig:coordenadas_polares}). A priori, la solución más obvia es crear una clase que implemente la interfaz \textit{Runnable} y empezar un hilo mediante la clase \textit{Thread}. Tras este intento, el sistema operativo elimina este hilo porque, al parecer, consume mucha CPU, lo cual no permite a la actividad principal refrescar la interfaz gráfica. Es decir, genera inanición. Como solución y después de investigar este contratiempo, encontré la clase \textit{Handler} con su método de instancia \textit{postdelayed}. Esencialmente, se inicializa este \textit{Hanlder} con un objeto que implemente \textit{Runnable} y postdelayed crea una alarma que se activará después de un determinado número de milisegundos pasado como parámetro. Al activarse, se ejecute el método \textit{run()} de este handler. Con esto, creamos un objeto \textit{Runnable} que ejecute una vez el cuerpo del bucle y finalmente vuelva a montar la alarma, como si se tratase de una recursión infinita (figura \ref{fig:mainactivity_hilosender}).
 
 \end{itemize}
 
 
 \lsection{Servidores de vídeo}
-\subsection{Streaming multimedia, códecs y formatos de vídeo}
-\todo[inline]{Implementación: \currentname}
+%\subsection{Streaming multimedia, códecs y formatos de vídeo}
+%
+%\begin{itemize}
+%
+%	\item
+%	\item SDP gestión de sesión:
+%
+%\end{itemize}
+%
+%\todo[inline]{Implementación: \currentname}
 \subsection{Configuración del servidor}
 
 Para los servidores de vídeo, finalmente se ha utilizado el comando \textbf{cvlc}, herramienta de VLC para la terminal. Ésta ofrece una inmensidad de servicios, entre los cuales no interesa la posibilidad de desplegar servidores multimedia. La configuración de estos se indica junto con este comando en una cadena de caracteres que vendrá a definir el \textit{pipeline} que se ejecutará para dicho servidor. Un pipeline consta, en resumen, de estos elementos:
@@ -85,7 +84,7 @@ El código completo del script se encuentra en la figura \ref{fig:despliegue_serv
 %\subsection{Servomotor y arduino}
 \subsection{Circuito y programación de la placa Arduino}
 
-El circuito para controlar el servomotor con nuestra placa es trivial, como se muestra en la figura \ref{fig:circuito_arduino}. 
+El circuito para controlar el servomotor con nuestra placa es trivial, como se muestra en la figura \ref{fig:circuito_arduino}. Se ha utilizado la librería \cite{link:varspeedservo} para controlarlo, que se carga en la memoria de la placa junto al siguiente programa codificado. 
 
 El lenguaje que utiliza el IDE de Arduino es un dialecto de C++. Un programa consta obligatoriamente de dos partes y de tantas variables y funciones auxiliares como puedan caber en la memoria de la placa. La primera parte, la función \textit{setup()}, se ejecuta cuando ésta se conecta. La segunda, la función \textit{loop()}, se invoca inmediatamente después y se ejecuta dentro de un bucle infinito.
 
@@ -106,9 +105,11 @@ El lenguaje que utiliza el IDE de Arduino es un dialecto de C++. Un programa con
 \end{figure}
 
 \subsection{Cliente/servidor UDP}
-\todo[inline]{Implementación: \currentname}
+%%\todo[inline]{Implementación: \currentname}
 
-Se ha utilizado la librería \cite{online:varspeedservo} para el control del servomotor.
+UDP es el protocolo de transporte utilizado para implementar el servidor de control. UDP es un protocolo no fiable, ya que no asegura que los paquetes lleguen a su destino ni que lleguen en orden, lo cual hace que las cabeceras sean más ligeras y, por tanto, pueda dedicarse mayor caudal del ancho de banda al contenido que se transporta. También es más sencillo que TCP en el sentido de que no necesita establecer una conexión. El servidor debe vincularse (bind) a una dirección IP y un puerto, y posteriormente los clientes pueden enviar y recibir de esta dirección sin necesidad de llevar a cabo un \textit{handshake}.
+
+UDP es idóneo para aplicaciones en tiempo real, ya que no nos interesa reenviar paquetes, puesto que los mensajes correspondientes a la posición del usuario sólo son válidos en el instante en el que se envía.
 
 \subsection{Programación del servidor}
 Para la implementación de este servidor, se ha elegido Python 2.7 como lenguaje de programación por los siguientes motivos:
@@ -135,4 +136,6 @@ El constructor de esta clase intenta abrir el puerto serial donde ha de encontra
 	\item Llama al método \textit{moveAngle()} de la instancia de \textit{ServoController} para realizar el movimiento angular
 \end{enumerate}	
 \end{itemize}
+
+
 

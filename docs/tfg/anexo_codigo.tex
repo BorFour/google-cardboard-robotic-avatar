@@ -66,23 +66,25 @@ A continuación se muestran los fragmentos de código más relevantes de cada uno d
 \end{figure}
 
 
+\newpage
+
 \subsection{MainActivity.java}
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\inputminted[firstline=91,lastline=110]{java}{\fpandroidclient/app/src/main/java/com/example/borch/surfaceviewcarboard/MainActivity.java}
 	\caption{\textbf{Inicialización de objeto VideoView}. El mismo proceso se realiza para myVideoViewRight y ambos comparten el mismo MediaController.}
 	\label{fig:mainactivity_videoviewinit}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\inputminted[firstline=133,lastline=142]{java}{\fpandroidclient/app/src/main/java/com/example/borch/surfaceviewcarboard/MainActivity.java}
 	\caption{\textbf{Acceso a los sensores y creación del objeto \textit{PositionSender}}: }
 	\label{fig:mainactivity_setupsensorposition}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\inputminted[firstline=161,lastline=174]{java}{\fpandroidclient/app/src/main/java/com/example/borch/surfaceviewcarboard/MainActivity.java}
-	\caption{Hilo de envío de la posición al servidor de control}
+	\caption{\textbf{Hilo de envío} de la posición al servidor de control}
 	\label{fig:mainactivity_hilosender}
 \end{figure}
 
@@ -94,7 +96,7 @@ A continuación se muestran los fragmentos de código más relevantes de cada uno d
 
 \begin{figure}[H]
 	\inputminted[firstline=278,lastline=285]{java}{\fpandroidclient/app/src/main/java/com/example/borch/surfaceviewcarboard/MainActivity.java}
-	\caption{\textbf{Método \textit{onBackPressed()}}: }
+	\caption{\textbf{Método \textit{onBackPressed()}}: se ejecuta cuando se presiona el botón de los dispositivos Android con forma de triángulo.}
 	\label{fig:mainactivity_onbackpressed}
 \end{figure}
 
@@ -104,37 +106,39 @@ A continuación se muestran los fragmentos de código más relevantes de cada uno d
 \subsection{deploy.sh}
 \begin{figure}[H]
 	\inputminted[firstline=1,lastline=11]{bash}{\fpservidoresvideo/deploy.sh}
-	\caption{Script de despliegue de los servidores multimedia}
+	\caption{\textbf{Script de despliegue} de los servidores multimedia.}
 	\label{fig:despliegue_servidores_video}
 \end{figure}	
+
+\newpage
 
 \lsection{Servidor de control}
 
 \subsection{servo\_serial\_read.ino}
-\begin{figure}[H]
+\begin{figure}[h]
 	\inputminted[firstline=1,lastline=8]{cpp}{\fparduinocode/servo_serial_write/servo_serial_write.ino}
-	\caption{\textbf{Cabecera del código del Arduino}}
+	\caption{\textbf{Cabecera del código del Arduino}.}
 	\label{fig:header_arduino}
 \end{figure}	
 
 
 \begin{figure}[H]
 	\inputminted[firstline=9,lastline=27]{cpp}{\fparduinocode/servo_serial_write/servo_serial_write.ino}
-	\caption{\textbf{Función auxiliar \textit{myRead()}}. Lee caracter a caracter del puerto serial hasta encontrar el valor '\textbackslash n' y convierte la cadena de caracteres obtenida en un valor numérico}
+	\caption{\textbf{Función auxiliar \textit{myRead()}}. Lee caracter a caracter del puerto serial hasta encontrar el valor '\textbackslash n' y convierte la cadena de caracteres obtenida en un valor numérico.}
 	\label{fig:my_read_arduino}
 \end{figure}	
 %
 
 \begin{figure}[H]
 	\inputminted[firstline=27,lastline=34]{cpp}{\fparduinocode/servo_serial_write/servo_serial_write.ino}
-	\caption{\textbf{Función \textit{setup()} de Arduino}. Esta función se ejecuta al arrancarse la placa}
+	\caption{\textbf{Función \textit{setup()} de Arduino}. Esta función se ejecuta al arrancarse la placa.}
 	\label{fig:setup_arduino}
 \end{figure}	
 
 
 \begin{figure}[H]
 	\inputminted[firstline=36,lastline=43]{cpp}{\fparduinocode/servo_serial_write/servo_serial_write.ino}
-	\caption{\textbf{Función \textit{loop()} de Arduino}. Esta función se ejecuta indefinidamente después de ejecutarse \textit{setup()}}
+	\caption{\textbf{Función \textit{loop()} de Arduino}. Esta función se ejecuta indefinidamente después de ejecutarse \textit{setup()}.}
 	\label{fig:loop_arduino}
 \end{figure}	
 
@@ -148,7 +152,7 @@ A continuación se muestran los fragmentos de código más relevantes de cada uno d
 
 \begin{figure}[H]
 	\inputminted[firstline=62,lastline=83]{python}{\fpservidorcontrol/control_servo.py}
-	\caption{\textbf{Definición de la clase y constructor de \textit{ServoControl}}. }
+	\caption{\textbf{Definición de la clase y constructor de \textit{ServoControl}}.}
 	\label{fig:controlservo_moveangle}
 \end{figure}
 
@@ -156,13 +160,13 @@ A continuación se muestran los fragmentos de código más relevantes de cada uno d
 
 \begin{figure}[H]
 	\inputminted[firstline=7,lastline=16]{python}{\fpservidorcontrol/udp_server.py}
-	\caption{\textbf{Inicialización de recursos del servidor de control}. }
+	\caption{\textbf{Inicialización de recursos del servidor de control}.}
 	\label{fig:setup_udp_server}
 \end{figure}
 
 \begin{figure}[H]
 	\inputminted[firstline=17,lastline=28]{python}{\fpservidorcontrol/udp_server.py}
-	\caption{\textbf{Bucle del servidor de control}. }
+	\caption{\textbf{Bucle del servidor de control}.}
 	\label{fig:loop_udp_server}
 \end{figure}
 

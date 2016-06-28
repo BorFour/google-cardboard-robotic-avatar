@@ -3,20 +3,25 @@
 
 
 \lsection{Conclusiones}
-\todo[inline]{\currentname}
+%\todo[inline]{\currentname}
 
-Los objetivos principales de este proyecto se han visto realizados.
+%Los objetivos principales de est<e proyecto se han visto realizados.
 
-Personalmente, se ha llevado a cabo el desarrollo de un sistema distribuido heterógeneo, integrando tecnologías punteras y variadas como culmen de mis estudios en \carrera. 
+Personalmente y como logro propio, se ha llevado a cabo el desarrollo de un sistema distribuido heterógeneo, integrando tecnologías punteras y variadas como culmen de mis estudios en \carrera. 
 
-El mundo de las redes multimedia y la transmisión de vídeo y audio tiene muchos detalles. A pesar de que no ha sido demasiado complejo integrar estas herramientas para desplegar un servidor de vídeo. Las implementaciones de los protocolos a nivel de aplicación de transmisión de multimedia (RTSP en este caso) son complejas a bajo nivel, así como los códecs, los formatos y todos sus parámetros, variables y metadatos.
+El mundo de las redes multimedia y la transmisión de vídeo y audio tiene muchos detalles. A pesar de que no ha sido complejo integrar estas herramientas para desplegar un servidor de vídeo, las implementaciones de los protocolos a nivel de aplicación de transmisión de multimedia (RTSP en este caso) son complejas a bajo nivel, así como los códecs, los formatos y todos sus parámetros, variables y metadatos, lo cual tendría que tomarse en cuenta en consiguientes fases de optimización.
 		
-Por otro lado y como se ha comentado previamente, la realidad virtual se encuentar en auge, motivo por el cual han surgido y surgen nuevas librerías, herramientas, frameworks, etc. orientados la creación de programas y aplicaciones de VR. Al ser tan nuevas, todavía necesitan madurar arreglando fallos y bugs, documentando mejor las APIs e implementando más funcionalidad necesaria y/o útil para el desarrollo de este tipo de software.
+Por otro lado y como se ha comentado previamente, la realidad virtual se encuentar en auge, motivo por el cual han surgido y surgen nuevas librerías, herramientas, \textit{frameworks}, etc. orientados la creación de programas y aplicaciones de VR. Al ser tan nuevas, todavía necesitan madurar arreglando fallos y bugs, documentando mejor las APIs e implementando más funcionalidad necesaria y/o útil para el desarrollo de este tipo de software. Aún con esto, es el momento de desarrollar software de VR, ya sean aplicaciones para Cardboard o programas (videojuegos o software más comercial) para computadores de sobremesa para las nuevas plataformas que se están empezando comercializar actualmente.
 
+JavaCV era una opción en el lado del cliente para manipular los \textit{streams} y los frames obtenidos de estos, pero por un fallo de implementación del .jar para la arquitectura \textit{arm} se tuvo que renunciar a todo este potencial. Aún así, OpenCV y sus versiones para \textit{x86} y \textit{amd64} serían una buen opción para un procesamiento previo al envío u otro proyecto relacionado.
+
+\newpage
 
 
 \lsection{Trabajo futuro}
-\todo[inline]{\currentname}
+%\todo[inline]{\currentname}
+Se ha llevado a cabo un prototipo con la funcionalidad básica del producto descrito en un principio. A continuación se enumeran las distintas tareas que se podrían llevar a cabo para obtener una versión mejorada de éste.
+
 \begin{itemize}
 
 	\item {
@@ -25,10 +30,11 @@ Por otro lado y como se ha comentado previamente, la realidad virtual se encuent
 			\item Desarrollar una \textbf{vista} para Android (android.view.View) \textbf{específica para streams RTSP}, que ofrezca mayores prestaciones tales como menor delay, mantener la sesión RTSP, sincronización de los dos flujos de vídeo, etc.
 		\end{enumerate}
 	}	
-	\item Utilizar la API Google VR for Android *REFERENCIA*. Hasta hace unos meses, se llamaba Cardboard API. Actualmente también incluye soporte para DayDream VR\cite{online:daydream}, cuyo lanzamiento tendrá lugar en otoño del 2016, y está más documentada, con más ejemplos y más funcionalidad. Los vídeos se mostrarían sobre una textura de OpenGL, que harían que los vídeos se mostrasen como en la figura~\ref{fig:cardboard_3d}
-	\item Implementar la rotación sobre los ejes X e Y (Pitch y Roll respectivamente, figura ~\ref{fig:coordenadas_polares}).
-	\item \textbf{Utilizar motores paso a paso o \textit{steppers}} para mover la estructura sobre la que se encuentren las cámaras.
+	\item Utilizar la API Google VR for Android \cite{link:googlevr}. Hasta hace unos meses, se llamaba Cardboard API. Actualmente también incluye soporte para DayDream VR \cite{link:daydream}, cuyo lanzamiento tendrá lugar en otoño del 2016, y está más documentada, con más ejemplos y más funcionalidad. Los vídeos se mostrarían sobre una textura de OpenGL como en la figura~\ref{fig:cardboard_3d}
+	\item Implementar la rotación sobre los ejes X e Y (Pitch y Roll respectivamente, figura \ref{fig:coordenadas_polares}).
+	\item \textbf{Utilizar motores paso a paso o \textit{steppers}} para mover la estructura sobre la que se encuentren las cámaras, ya que estos permiten girar un determinado arco con precisión, dependiendo de las especificaciones del componente.
+	\item Modelar mediante un editor de 3D y posteriormente imprimir un exoesqueleto en el que puedan acomodarse las cámaras y que proteja los motores y circuitos de los golpes, el calor, etc.
 	\item Añadir un stream más que se corresponda con el audio, grabado en el servidor a través de un micrófono cualquiera.
-	
+	\item Alojar la estructura con las cámaras y los motores sobre otro robot que proporcione movilidad, como un vehículo teledirigido un dron.
 \end{itemize}
 \newpage \thispagestyle{empty} % Página vacía 
