@@ -1,0 +1,64 @@
+\chapter{Manual de usuario}
+\label{Anexo:manual_usuario}
+
+Manual de ayuda al usuario para acceder al código y poder hacer funcionar el sistema.
+
+\lsection{Repositorio}
+%\todo[inline]{Manual de usuario: \currentname}
+
+\subsection{Cómo clonar el repositorio}
+
+En la terminal de Linux, ejecutar el siguiente comando:
+
+\begin{minted}{bash}
+mkdir <directorio_destino>
+cd <directorio_destino>
+git clone https://BorFour@bitbucket.org/BorFour/googlecardboardroboticavatar.git
+\end{minted}
+
+\lsection{Dependencias}
+\begin{itemize}
+	\item Sistema operativo basado en UNIX
+	\item Git
+	\item VLC
+	\item Python 2.7
+	\item Arduino IDE	
+\end{itemize}
+\newpage
+\lsection{Uso}
+\subsection{Código arduino}
+Para compilar y subir a la placa el código del arduino, deben seguirse los siguientes pasos:
+\begin{enumerate}
+	\item Conectar el Arduino al PC con el cable USB
+	\item Abrir el código. File --> Open... --> 
+	
+	<ruta del proyecto>/src/
+	ArduinoCode/servo\_serial\_write/servo\_serial\_write.ino
+	\item Importar la librería VarSpeedServo. Sketch --> Import library... --> Add library... --> <ruta del proyecto>/src/ArduinoCode/VarSpeedServo.zip
+	\item Compilar y subir el código. Ctrl + U.
+\end{enumerate}
+
+\subsection{Despliegue de los servidores}
+En el directorio raíz, ejecutar el siguiente comando en la terminal de Linux:
+
+\begin{minted}{bash}
+	make
+\end{minted}
+
+Esto hará que se ejecuten los dos siguientes scripts:
+
+\begin{itemize}	
+	\item \textbf{Despliegue de los servidores de vídeo}: el script src/VideoServers/deploy.sh despliega los servidores de vídeo en los puertos 8554 y 8556 (cámaras izquierda y cámara derecha respectivamente)
+	\item \textbf{Despliegue del servidor de control}: despliega el servidor UDP en el puerto 8558, asiocándolo a la terminal en la que se ejecute el script control\_server.sh	
+\end{itemize}
+
+\subsection{Instalación de la aplicación}
+
+Para instalar la aplicación en un smartphone con Android, seguir estos dos pasos:
+
+\begin{itemize}
+	\item Enviar el archivo gcra\_client.apk al dispositivo móvil.
+	\item Al abrir el archivo, Android se encargará de instalarlo.
+\end{itemize}
+
+\newpage \thispagestyle{empty} % Página vacía 

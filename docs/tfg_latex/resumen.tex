@@ -5,9 +5,9 @@
 
 El objetivo principal de este Trabajo de Fin de Grado es desarrollar un sistema distribuido heterogéneo, combinando visión remota y realidad virtual, donde el usuario pueda ver a través de los ojos de un \textit{avatar robótico}.
 
-El cliente consiste en unas gafas de realidad virtual, como lo son Google Cardboard. Es una artilugio de cartón con dos huecos para un par de lentes, que apuntan a una cavidad donde se ha de situar un smarthphone. Una aplicación mostrará dos imágenes en la pantalla del dispositivo móvil que serán observadas a través de estas lentes por el usuario.
+El cliente consiste en unas gafas de realidad virtual, como lo son Google Cardboard. Es un artilugio de cartón con dos huecos para un par de lentes, que apuntan a una cavidad donde se ha de situar un smartphone. Una aplicación mostrará dos imágenes en la pantalla del dispositivo móvil que serán observadas a través de estas lentes por el usuario.
 
-En la parte del servidor tenemos un par de videocámaras situadas en una estructura sobre un motor. Una parte del servidor envía los fotogramas capturados por las cámaras a través de un protocolo de multimedia en red hasta el cliente, donde cada transmisión se corresponde con un ojo del usuario.
+En la parte del servidor habrá un par de videocámaras situadas en una estructura sobre un motor. Una parte del servidor envía los fotogramas capturados por las cámaras a través de un protocolo de multimedia en red hasta el cliente, donde cada transmisión se corresponde con un ojo del usuario.
 
 Por otra parte, el servidor también se encargará de hacer rotar la estructura con las cámaras, controlando el motor según los movimientos de la cabeza del usuario. La aplicación envía periódicamente la rotación del dispositivo, que se calcula utilizando el acelerómetro y la brújula del smartphone, a este servidor de control.
 
